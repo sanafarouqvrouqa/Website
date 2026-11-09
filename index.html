@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2G7JLGEXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z2G7JLGEXK');
+</script>
+
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=7bd9bf6f-17c7-427f-a4f7-de27eaaaa7aa
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="facebook-domain-verification" content="kc107m5l64g49fofxxud7g2efxej6g" />
+<meta name="color-scheme" content="light">
+<title>Sana Handicrafts | Handmade concrete and terrazzo decor, made in your color</title>
+<meta name="description" content="Small-batch concrete and terrazzo pieces for the home, poured to order. Every piece can be made in the color you choose.">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<style>
+/* Sana Handicrafts — Swiss editorial catalogue on limestone paper */
+
+:root {
+  --bg: oklch(0.945 0.012 85);
+  --ink: oklch(0.29 0.008 75);
+  --muted: oklch(0.55 0.010 80);
+  --hair: oklch(0.86 0.010 85);
+  --accent: oklch(0.58 0.115 45);
+  --paper-2: oklch(0.925 0.014 85);
+
+  --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --pad: clamp(20px, 5vw, 64px);
+  --gap: clamp(20px, 2.4vw, 34px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* faint paper tooth */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.4;
+  background-image: radial-gradient(oklch(0.29 0.008 75 / 0.045) 0.5px, transparent 0.6px);
+  background-size: 3px 3px;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { font-weight: 500; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; text-wrap: pretty; }
+
+::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  padding-inline: var(--pad);
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+.rule { border: 0; border-top: 1px solid var(--hair); margin: 0; }
+
+/* ---------- type utilities ---------- */
+
+.meta {
+  font-size: 13px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.lede {
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+/* wiping underline link */
+.link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: color 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.link:hover::after, .link:focus-visible::after { transform: scaleX(1); }
+.link:hover { color: var(--accent); }
+
+/* primary CTA: accent */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding: 12px 0 8px;
+  min-height: 44px;
+  transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.cta .arrow { transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1); }
+.cta:hover .arrow { transform: translateX(6px); }
+.cta:active { transform: scale(0.98); }
+.cta--lg { font-size: 16px; }
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+}
+.site-header .grid { align-items: center; padding-block: 12px; }
+.brand {
+  grid-column: 1 / span 5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  min-height: 48px;
+  padding-block: 7px;
+}
+.brand img { height: 34px; width: 34px; object-fit: contain; }
+.wordmark {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+  display: block;
+}
+.brand .tagline {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+.site-nav {
+  grid-column: 6 / span 7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(14px, 2vw, 30px);
+  flex-wrap: wrap;
+}
+.site-nav a {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+.site-nav .link::after { bottom: 12px; }
+.site-nav .nav-cta {
+  color: var(--accent);
+  box-shadow: inset 0 -1px 0 var(--accent);
+  transition: opacity 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.site-nav .nav-cta:hover { opacity: 0.72; }
+.nav-drop{position:relative}
+.nav-drop-btn{font:inherit;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);background:none;border:0;cursor:pointer;min-height:44px;padding:0;display:inline-flex;align-items:center;gap:6px}
+.nav-drop-caret{font-size:10px;transition:transform 160ms ease}
+.nav-drop.open .nav-drop-caret{transform:rotate(180deg)}
+.nav-drop-menu{position:absolute;top:100%;left:0;min-width:270px;background:var(--bg);border:1px solid var(--hair);box-shadow:0 12px 30px rgba(27,26,23,.12);padding:6px;display:none;z-index:30}
+.nav-drop.open .nav-drop-menu{display:block}
+@media (hover:hover) and (min-width:901px){.nav-drop:hover .nav-drop-menu{display:block}.nav-drop:hover .nav-drop-caret{transform:rotate(180deg)}}
+.site-nav .nav-drop-menu a{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:10px 12px;text-transform:none;letter-spacing:0;min-height:0}
+.site-nav .nav-drop-menu a:hover,.site-nav .nav-drop-menu a:focus-visible{background:var(--paper-2)}
+.nav-drop-menu strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:500;color:var(--ink)}
+.nav-drop-menu span{font-size:12.5px;color:var(--muted)}
+
+
+/* ---------- hero ---------- */
+
+.hero { border-bottom: 1px solid var(--hair); }
+.hero .grid { padding-block: 0; align-items: stretch; }
+.hero-type {
+  grid-column: 1 / span 5;
+  padding-block: clamp(48px, 7vw, 112px);
+  align-self: center;
+}
+.hero-figure { grid-column: 6 / span 7; display: flex; }
+.hero-slides { min-height: clamp(300px, 44vw, 620px); }
+.hero-figure img {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(300px, 44vw, 620px);
+  object-fit: cover;
+}
+.hero h1 {
+  font-size: clamp(44px, 7vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  text-wrap: balance;
+  margin-bottom: 28px;
+}
+.hero .lede { color: var(--ink); margin-bottom: 40px; }
+.hero .hero-meta { margin-top: 18px; }
+
+/* ---------- section scaffolding ---------- */
+
+.section { padding-top: clamp(64px, 8vw, 120px); }
+
+.section-head {
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: start;
+  padding-top: 28px;
+}
+.section-index {
+  grid-column: 1 / span 2;
+  font-size: clamp(54px, 7vw, 96px);
+  line-height: 0.8;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  color: var(--hair);
+  user-select: none;
+}
+.section-title {
+  grid-column: 3 / span 4;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.02;
+}
+.section-intro {
+  grid-column: 8 / span 5;
+  color: var(--muted);
+  max-width: 44ch;
+}
+
+@media (max-width: 900px) {
+  .brand { grid-column: 1 / span 12; }
+  .site-nav { grid-column: 1 / span 12; justify-content: flex-start; margin-top: 8px; }
+  .hero-type { grid-column: 1 / span 12; }
+  .hero-figure { grid-column: 1 / span 12; padding-bottom: 0; }
+  .section-index { grid-column: 1 / span 12; }
+  .section-title { grid-column: 1 / span 12; margin-top: 14px; }
+  .section-intro { grid-column: 1 / span 12; margin-top: 22px; }
+}
+
+/* ---------- motion ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 260ms cubic-bezier(0.23, 1, 0.32, 1), transform 260ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .reveal.is-in { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- product grid ---------- */
+
+.products {
+  grid-column: 1 / span 12;
+  list-style: none;
+  margin: clamp(40px, 5vw, 72px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: clamp(44px, 5vw, 76px);
+}
+.product { display: flex; flex-direction: column; }
+.product-shot {
+  display: block;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--paper-2);
+  text-decoration: none;
+}
+.product-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.product:hover .product-shot img { transform: scale(1.02); }
+
+.product-shot--type {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(18px, 2vw, 28px);
+}
+.type-tile-label {
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: auto;
+}
+.type-tile-note { display: block; margin-bottom: auto; }
+
+.product-name {
+  font-size: 17px;
+  line-height: 1.35;
+  margin: 20px 0 0;
+  letter-spacing: -0.01em;
+}
+.product-price { color: var(--muted); font-size: 15px; margin-top: 4px; }
+.product-made { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.card-color{display:block;margin-top:.45rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#6d675c}
+.card-color input{display:block;width:100%;margin-top:.3rem;font:inherit;font-size:.8rem;padding:.35rem .5rem;border:1px solid rgba(27,26,23,.25);background:#fffdf8;color:#1b1a17;text-transform:none;letter-spacing:0}
+.product-caption {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 10px;
+  max-width: 34ch;
+}
+.product-links {
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.product-buy {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.product-buy:hover, .product-buy:focus-visible { color: var(--accent); }
+.product-pin {
+  font-size: 13px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media (max-width: 900px) {
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .products { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- terrazzo speckle band ---------- */
+
+.speckle-band {
+  margin-top: clamp(64px, 8vw, 120px);
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  background: var(--paper-2);
+  height: 54px;
+  overflow: hidden;
+}
+.speckle-band svg { width: 100%; height: 100%; display: block; }
+
+/* ---------- process steps ---------- */
+
+.steps {
+  grid-column: 1 / span 12;
+  list-style: none;
+  margin: clamp(40px, 5vw, 72px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: 40px;
+}
+.step { display: flex; flex-direction: column; }
+.step:nth-child(1) { grid-column: 1 / span 4; }
+.step:nth-child(2) { grid-column: 5 / span 4; }
+.step:nth-child(3) { grid-column: 9 / span 4; }
+.step-num {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border-top: 1px solid var(--hair);
+  padding-top: 14px;
+}
+.step h3 { font-size: clamp(22px, 2vw, 27px); margin-top: 10px; }
+.step p { color: var(--muted); font-size: 16px; margin-top: 12px; max-width: 32ch; }
+
+.steps-close {
+  grid-column: 9 / span 4;
+  margin-top: clamp(40px, 5vw, 64px);
+  font-size: clamp(18px, 1.7vw, 22px);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+
+/* ---------- pinterest boards ---------- */
+
+.pin-intro { grid-column: 1 / span 12; }
+.boards {
+  grid-column: 1 / span 12;
+  list-style: none;
+  margin: clamp(40px, 5vw, 64px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: 36px;
+}
+.board { grid-column: span 3; border-top: 1px solid var(--hair); padding-top: 16px; }
+.board a {
+  font-size: clamp(18px, 1.5vw, 21px);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.board p { color: var(--muted); font-size: 15px; margin-top: 6px; max-width: 26ch; }
+.boards-more {
+  grid-column: 1 / span 12;
+  margin-top: clamp(36px, 4vw, 56px);
+}
+.boards-more a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  margin-top: clamp(72px, 9vw, 128px);
+  border-top: 1px solid var(--hair);
+  padding-block: clamp(44px, 5vw, 72px) clamp(36px, 4vw, 56px);
+}
+.footer-brand { grid-column: 1 / span 4; display: flex; align-items: flex-start; gap: 14px; }
+.footer-brand img { width: 28px; height: 28px; object-fit: contain; }
+.footer-brand .wordmark { font-size: 13px; }
+.footer-brand .meta { margin-top: 4px; }
+.footer-contact { grid-column: 6 / span 4; }
+.footer-contact p { max-width: 32ch; }
+.footer-links {
+  grid-column: 10 / span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.footer-links a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.footer-close {
+  grid-column: 1 / span 12;
+  margin-top: clamp(40px, 5vw, 72px);
+  border-top: 1px solid var(--hair);
+  padding-top: 18px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .step:nth-child(1), .step:nth-child(2), .step:nth-child(3) { grid-column: 1 / span 12; }
+  .steps-close { grid-column: 1 / span 12; max-width: 32ch; }
+  .board { grid-column: span 6; }
+  .footer-brand, .footer-contact, .footer-links { grid-column: 1 / span 12; }
+  .footer-contact { margin-top: 28px; }
+  .footer-links { margin-top: 8px; }
+}
+@media (max-width: 560px) {
+  .board { grid-column: 1 / span 12; }
+}
+
+/* underline position for links given a 44px tap height */
+.product-buy::after,
+.product-pin::after,
+.board a::after,
+.boards-more a::after,
+.footer-links a::after {
+  bottom: calc(50% - 0.78em);
+}
+
+
+/* ---- cart ---- */
+.product-actions{margin:.55rem 0 .35rem}
+.cart-add{font:inherit;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;
+  background:#1b1a17;color:#f6f2ea;border:0;padding:.62rem 1.15rem;cursor:pointer;
+  transition:background .18s ease,transform .18s ease}
+.cart-add:hover{background:#3a372f}
+.cart-add:active{transform:translateY(1px)}
+.cart-add.is-added{background:#5e6b4f}
+.cart-button{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;font:inherit;font-size:.8rem;
+  letter-spacing:.08em;text-transform:uppercase;background:#1b1a17;color:#f6f2ea;border:0;
+  padding:.85rem 1.25rem;cursor:pointer;box-shadow:0 10px 30px rgba(27,26,23,.28)}
+.cart-button .cart-count{display:inline-block;margin-left:.5rem;background:#f6f2ea;color:#1b1a17;
+  border-radius:999px;min-width:1.35em;padding:0 .35em;text-align:center}
+.cart-scrim{position:fixed;inset:0;background:rgba(27,26,23,.42);opacity:0;pointer-events:none;
+  transition:opacity .25s ease;z-index:70}
+.cart-scrim.is-open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;height:100%;height:100dvh;width:min(30rem,100%);background:#f6f2ea;
+  z-index:80;max-height:100%;max-height:100dvh;transform:translateX(102%);transition:transform .28s ease;display:flex;flex-direction:column;
+  box-shadow:-18px 0 40px rgba(27,26,23,.18)}
+.cart-drawer.is-open{transform:translateX(0)}
+.cart-head{flex:0 0 auto;display:flex;align-items:baseline;justify-content:space-between;
+  padding:1.1rem 1.25rem .8rem;border-bottom:1px solid rgba(27,26,23,.14)}
+.cart-head h2{margin:0;font-size:1.02rem;letter-spacing:.02em}
+.cart-close{background:none;border:0;font:inherit;font-size:1.4rem;line-height:1;cursor:pointer;color:#1b1a17}
+.cart-steps{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:#6d675c;margin:.2rem 0 0}
+.cart-step[hidden],.cart-foot-step[hidden]{display:none}
+#step-addr .ship-addr{border-top:0;padding-top:0}
+#step-addr .ship-addr h3{margin-top:0}
+.review{padding:.75rem 1.25rem}
+.review h3{margin:0 0 .4rem;font-size:.92rem}
+.review-line{display:flex;justify-content:space-between;gap:.65rem;font-size:.84rem;padding:.35rem 0;border-bottom:1px solid rgba(27,26,23,.1)}
+.review-addr{font-size:.84rem;line-height:1.5;margin:.5rem 0 0}
+.review-addr .lbl{display:block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#57524a;margin-bottom:.25rem}
+.step1-summary{font-size:.86rem;margin:0 0 .2rem}
+.step-next{width:100%;font:inherit;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:#1b1a17;color:#f6f2ea;border:0;padding:.8rem 1rem;cursor:pointer;margin-top:.65rem}
+.step-next:disabled,.step-back:disabled{opacity:.45;cursor:default}
+.step-nav{display:flex;gap:.6rem}
+.step-nav .step-back{flex:0 0 auto;padding:.8rem 1rem;background:none;border:1px solid rgba(27,26,23,.55);color:#1b1a17;font:inherit;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:.65rem}
+.step-nav .step-next{flex:1 1 auto}
+#sdk-pay{margin-top:.6rem;border-top:1px solid rgba(27,26,23,.1);padding-top:.6rem}
+#sdk-pay h3{margin:0 0 .4rem;font-size:.92rem}
+.card-field-label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#57524a;margin-bottom:.3rem}
+.card-field-box{margin-top:.2rem;border:1px solid rgba(27,26,23,.25);border-radius:.2rem;background:#fffdf8;min-height:2.15rem;display:flex;align-items:center;padding:.35rem .5rem;font-size:.82rem;color:#1b1a17;text-transform:none;letter-spacing:0;font-weight:400;overflow:hidden}
+.card-field-box iframe{width:100%;height:100%;display:block;border:0}
+.card-field-placeholder{color:#8a857c}
+.card-field-row{display:flex;gap:.5rem}
+.card-field-row .card-field-label{flex:1 1 0;min-width:0}
+.pay-summary{border:1px solid rgba(27,26,23,.14);border-radius:.4rem;background:#fffdf8;padding:.75rem 1rem}
+.pay-summary .review-line:last-child{border-bottom:0}
+.pay-ship-method{font-size:.78rem;color:#57524a;margin:.5rem 0 0;line-height:1.5}
+.pay-ship-to{margin-top:.75rem;font-size:.82rem}
+.pay-back{text-align:center;margin-top:.2rem}
+.pay-back-link{background:none;border:0;font:inherit;font-size:.82rem;color:#57524a;cursor:pointer;text-decoration:underline;padding:.5rem .5rem}
+.pay-note{margin-top:.6rem}
+#foot-step-3:has(#fallback-pay[hidden]){display:none}
+.sdk-divider{text-align:center;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#6d675c;margin:.9rem 0 .6rem}
+#order-done{padding:1rem 1.25rem}
+#order-done h3{margin:0 0 .4rem;font-size:.92rem}
+#order-done p{font-size:.86rem;line-height:1.5;margin:0 0 .6rem}
+.cart-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.cart-body{padding:1rem 1.25rem}
+.ship-addr{padding:0 1.25rem 1.25rem;border-top:1px solid rgba(27,26,23,.1)}
+.ship-addr h3{margin:1rem 0 .2rem;font-size:.92rem}
+.ship-addr-sub{font-size:.76rem;color:#57524a;margin:0 0 .7rem;line-height:1.5}
+.addr-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.addr-grid .full{grid-column:1/-1}
+.ship-addr label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#57524a}
+.ship-addr input,.ship-addr select{width:100%;font:inherit;font-size:.84rem;padding:.5rem .55rem;margin-top:.25rem;border:1px solid rgba(27,26,23,.25);border-radius:.2rem;background:#fffdf8;color:#1b1a17;text-transform:none;letter-spacing:0}
+.calc-btn{width:100%;font:inherit;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:#1b1a17;color:#f6f2ea;border:0;padding:.8rem 1rem;cursor:pointer;margin-top:.7rem;border-radius:.2rem}
+.calc-btn:disabled{opacity:.45;cursor:default}
+.ship-status{font-size:.78rem;margin:.55rem 0 0;line-height:1.45;color:#57524a}
+.ship-status.error{color:#8a2c1c}
+.cart-empty{font-size:.92rem;color:#6d675c}
+.cart-line{padding:.65rem 0;border-bottom:1px solid rgba(27,26,23,.1)}
+.cart-line-top{display:flex;justify-content:space-between;gap:.65rem;align-items:flex-start}
+.cart-thumb{width:3.5rem;height:3.5rem;object-fit:cover;flex:none;border:1px solid rgba(27,26,23,.14);background:#fffdf8}
+.cart-line-name{flex:1 1 auto;min-width:0;font-size:.82rem;line-height:1.3;margin:0}
+.cart-line-price{font-size:.82rem;white-space:nowrap}
+.cart-qty{display:flex;align-items:center;gap:.45rem;margin-top:.4rem}
+.cart-qty button{background:none;border:1px solid rgba(27,26,23,.3);width:1.7rem;height:1.7rem;
+  font:inherit;cursor:pointer;color:#1b1a17}
+.cart-qty span{font-size:.8rem;min-width:1.2rem;text-align:center}
+.cart-remove{background:none;border:0;font:inherit;font-size:.78rem;letter-spacing:.05em;
+  text-transform:uppercase;color:#6d675c;cursor:pointer;margin-left:auto;text-decoration:underline}
+.cart-qty .cart-remove{width:auto;height:auto;flex:none;white-space:nowrap;font-size:.7rem;letter-spacing:.04em;padding:.32rem .6rem;background:#fffdf8;border:1px solid rgba(27,26,23,.35);border-radius:.2rem;box-shadow:0 1px 2px rgba(27,26,23,.18);text-decoration:none;color:#1b1a17}
+.cart-color{display:block;margin-top:.45rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#6d675c}
+.cart-color input{display:block;width:100%;margin-top:.3rem;font:inherit;font-size:.8rem;padding:.35rem .5rem;border:1px solid rgba(27,26,23,.25);background:#fffdf8;color:#1b1a17;text-transform:none;letter-spacing:0}
+.cart-foot{flex:0 0 auto;border-top:1px solid rgba(27,26,23,.14);padding:1.1rem 1.5rem 1.5rem;padding-bottom:max(1.5rem, env(safe-area-inset-bottom))}
+.cart-row{display:flex;justify-content:space-between;gap:.5rem;font-size:.82rem;margin-bottom:.3rem}
+.cart-row span:last-child{white-space:nowrap;flex:none}
+.cart-row.cart-total{font-size:.95rem;margin-top:.55rem;padding-top:.55rem;border-top:1px solid rgba(27,26,23,.14)}
+.cart-checkout{width:100%;font:inherit;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
+  background:#1b1a17;color:#f6f2ea;border:0;padding:.8rem 1rem;cursor:pointer;margin-top:.65rem}
+.cart-checkout:disabled{opacity:.45;cursor:default} .cart-card{width:100%;font:inherit;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:#fffdf8;color:#1b1a17;border:1px solid rgba(27,26,23,.55);padding:.8rem 1rem;cursor:pointer;margin-top:.5rem} .cart-card:disabled{opacity:.45;cursor:default}
+.cart-note{font-size:.76rem;color:#57524a;margin:.5rem 0 0;line-height:1.5;overflow-wrap:anywhere;white-space:normal;max-width:100%}
+@media (max-width:640px){.cart-button{right:.8rem;bottom:.8rem}}
+
+
+.contact{padding:4.5rem 0 5rem;border-top:1px solid var(--line)}
+.contact-form{max-width:36rem;margin:1.6rem 0 0}
+.contact .grid > *{grid-column:1 / -1}
+.contact .contact-form{max-width:40rem;width:100%}
+@media (min-width: 900px){
+  .contact .grid{align-items:start}
+  .contact #contact-title{grid-column:1 / span 5;grid-row:1}
+  .contact #contact-intro{grid-column:1 / span 5;grid-row:2}
+  .contact .contact-form{grid-column:7 / span 6;grid-row:1 / span 3;margin-top:0;max-width:none}
+}
+
+.contact-form .field{margin:0 0 1rem;display:flex;flex-direction:column;gap:.35rem}
+.contact-form label{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:#57524a}
+.contact-form input,.contact-form textarea{font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1px solid #8d8679;box-shadow:inset 0 1px 2px rgba(27,26,23,.06);padding:.75rem .85rem;border-radius:3px;width:100%}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#8d8679}
+.contact-form label{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);font-weight:600}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(177,98,61,.22)}
+.contact-form textarea{resize:vertical;min-height:7rem}
+.contact-form .field--submit{flex-direction:row;align-items:center;gap:.9rem;flex-wrap:wrap}
+.contact-send{font:inherit;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:#fff;border:none;padding:.8rem 1.6rem;cursor:pointer;border-radius:2px}
+.contact-send:hover{opacity:.9}
+.contact-send:disabled{opacity:.5;cursor:default}
+.contact-status{font-size:.84rem;color:#57524a}
+.hero-dots{position:absolute;right:.9rem;top:.9rem;display:flex;gap:.4rem;z-index:2}
+.hero-dots button{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.35);cursor:pointer}
+.hero-dots button[aria-current="true"]{background:#fff}
+.to-top{position:fixed;left:1rem;bottom:1rem;z-index:50;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:1.2rem;line-height:44px;text-align:center;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .3s}
+.to-top.is-on{opacity:.92;pointer-events:auto}
+</style>
+<link rel="canonical" href="https://sana-handicrafts.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sana Handicrafts">
+<meta property="og:title" content="Sana Handicrafts | Handmade concrete and terrazzo decor">
+<meta property="og:description" content="Small-batch concrete and terrazzo pieces for the home, poured to order. Every piece can be made in the color you choose.">
+<meta property="og:url" content="https://sana-handicrafts.netlify.app/">
+<meta property="og:image" content="https://i.pinimg.com/originals/4e/da/72/4eda72b4b52a41d229afc506b43d68a6.jpg">
+<meta property="og:image:alt" content="Large matte black hand-poured concrete tray">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sana Handicrafts | Handmade concrete and terrazzo decor">
+<meta name="twitter:description" content="Small-batch concrete and terrazzo pieces for the home, poured to order. Every piece can be made in the color you choose.">
+<meta name="twitter:image" content="https://i.pinimg.com/originals/4e/da/72/4eda72b4b52a41d229afc506b43d68a6.jpg">
+<meta name="theme-color" content="#F0ECE4">
+<script type="application/ld+json" id="sana-ld">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "Sana Handicrafts", "url": "https://sana-handicrafts.netlify.app/", "logo": "https://sana-handicrafts.netlify.app/images/apple-touch-icon.png", "sameAs": ["https://www.etsy.com/shop/SANAFV", "https://www.pinterest.com/sfvrouqa/"], "email": "sfvrouqa@gmail.com"}, {"@type": "ItemList", "name": "Sana Handicrafts shop", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "name": "Hand poured rectangle terrazzo tray", "image": "https://i.pinimg.com/originals/44/81/a3/4481a3f4c801bc80833dd7bf59b31ae9.jpg", "description": "Neutral terrazzo, stone flecks. Star, oval or rectangle, ten colors.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "21.35", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#terrazzo-tray", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "name": "Large black tray", "image": "https://i.pinimg.com/originals/4e/da/72/4eda72b4b52a41d229afc506b43d68a6.jpg", "description": "12 by 8 inches of matte black concrete. The one for a vanity or a bar cart.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "45.00", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#black-tray", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "name": "Moon and star trinket tray", "image": "https://i.pinimg.com/originals/c2/40/5d/c2405da15c384587fb17db9b97d6cd46.jpg", "description": "Celestial jewelry dish, 8 inches. Customizable color on request.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "25.00", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#moon-star-tray", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "name": "Oval concrete tea light holder", "image": "https://i.pinimg.com/originals/b5/72/d8/b572d8592ddea5745f2f2316b259134b.jpg", "description": "Fits a standard tea light. Warm to the touch, heavy in the hand.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#tea-light", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "name": "Concrete bud vase", "image": "https://i.pinimg.com/originals/d8/ed/d6/d8edd652e9ebface7b84007467e2a801.jpg", "description": "3 by 5 inches. Three shapes, seven colors, made for a single stem.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "25.00", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#bud-vase", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "name": "Wavy vanity tray", "image": "https://i.pinimg.com/1200x/a3/b5/d1/a3b5d1d35bb115275c8d31f5b2b83661.jpg", "description": "5 by 5 inches, soft zig zag edge. Rings, keys, a bar of soap.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "19.88", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#wavy-tray", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 7, "item": {"@type": "Product", "name": "Starfish trinket dish", "image": "https://i.etsystatic.com/41743787/r/il/c868da/8542907282/il_fullxfull.8542907282_im7y.jpg", "description": "About 5 inches point to point. Solid concrete, sealed matte. Felt pads on request. Beige, white, terracotta, sage, dusty blue or charcoal.", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "USD", "availability": "https://schema.org/MadeToOrder", "url": "https://sana-handicrafts.netlify.app/#Star", "itemCondition": "https://schema.org/NewCondition", "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY"}}}, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/ReturnShippingFees"}}}}, {"@type": "ListItem", "position": 8, "item": {"@type": "Product", "name": "2027 Daily Planner Printable", "description": "365 days of pages in soft terrazzo colors, plus monthly views. Three letter-size PDFs to print at home.", "image": "https://sana-handicrafts.netlify.app/images/planner-2027.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "14.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#planner-2027"}}}, {"@type": "ListItem", "position": 9, "item": {"@type": "Product", "name": "Kids Coloring Book, Ages 4 to 12", "description": "15 intricate designs, from easy to detailed. One printable PDF, letter size.", "image": "https://sana-handicrafts.netlify.app/images/coloring-book-tween.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "12.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#coloring-book-tween"}}}, {"@type": "ListItem", "position": 10, "item": {"@type": "Product", "name": "Cute Animals Coloring Book", "description": "10 cute animal pages for ages 3 to 8. One printable PDF, letter size.", "image": "https://sana-handicrafts.netlify.app/images/coloring-book-animals.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#coloring-book-animals"}}}, {"@type": "ListItem", "position": 11, "item": {"@type": "Product", "name": "Kids Learning Posters, Set of 6", "description": "Alphabet, numbers, colors, shapes, days and months. High-resolution PNGs to print.", "image": "https://sana-handicrafts.netlify.app/images/kids-posters.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "9.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#kids-posters"}}}, {"@type": "ListItem", "position": 12, "item": {"@type": "Product", "name": "Christmas Wall Art, Set of 6", "description": "Six cozy holiday prints: tree, wreath, lights and candles. High-resolution JPGs.", "image": "https://sana-handicrafts.netlify.app/images/christmas-wall-art.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "9.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#christmas-wall-art"}}}, {"@type": "ListItem", "position": 13, "item": {"@type": "Product", "name": "Home Management Planner Printable", "description": "25 pages for cleaning, meals, budget and to-dos, in a calm terrazzo design. Printable PDF.", "image": "https://sana-handicrafts.netlify.app/images/home-planner.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "9.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#home-planner"}}}, {"@type": "ListItem", "position": 14, "item": {"@type": "Product", "name": "Four Seasons Terrazzo Wall Art, 32 Prints", "description": "32 terrazzo prints for spring, summer, fall and winter, plus 8 originals. High-resolution JPGs.", "image": "https://sana-handicrafts.netlify.app/images/wall-art-bundle.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "24.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#wall-art-bundle"}}}, {"@type": "ListItem", "position": 15, "item": {"@type": "Product", "name": "2027 ADHD Daily Planner, Color", "description": "365 dated daily pages with a new color each month: focus, brain dump, top 3, time blocking and habits. One letter-size PDF.", "image": "https://sana-handicrafts.netlify.app/images/planner-2027-adhd.jpg", "brand": {"@type": "Brand", "name": "Sana Handicrafts"}, "offers": {"@type": "Offer", "price": "11.50", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "url": "https://sana-handicrafts.netlify.app/#planner-2027-adhd"}}}]}]}</script>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="grid">
+    <a class="brand" href="#top">
+      <span>
+        <span class="wordmark">Sana Handicrafts</span>
+        <span class="tagline">From earth to art</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="nav-drop" id="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-drop-menu">Products <span class="nav-drop-caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-drop-menu" id="nav-drop-menu">
+          <a href="#shop"><strong>Decor pieces</strong><span>Trays, tea light holder, vase &amp; dish</span></a>
+          <a href="#digital"><strong>Digital products</strong><span>Planners, coloring books &amp; wall art</span></a>
+        </div>
+      </div>
+      <a class="link" href="#pinterest">Pinterest</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="link" href="#policies">Shipping &amp; returns</a>
+      <a class="link" href="#" id="cart-open-nav">Cart (<span class="cart-count-nav">0</span>)</a>
+      <a class="nav-cta" href="https://www.etsy.com/shop/SANAFV" target="_blank" rel="noopener">Shop on Etsy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" aria-label="Introduction">
+  <div class="grid">
+    <div class="hero-type">
+      <h1>Poured by hand, in the color you choose.</h1>
+      <p class="lede">Small-batch concrete and terrazzo pieces for the corners of a home that get looked at every day. Every piece is made to order, so the color is yours to name: pick one from the listing or describe the shade you want and it gets mixed that way.</p>
+      <a class="cta cta--lg" href="https://www.etsy.com/shop/SANAFV" target="_blank" rel="noopener">See the shop on Etsy <span class="arrow" aria-hidden="true">&#8594;</span></a>
+      <p class="meta hero-meta">On Etsy since 2023 / Any color, made to order</p>
+    </div>
+    <figure class="hero-figure hero-slides" id="hero-slides" aria-label="Pieces from the shop"></figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="section" id="shop" aria-labelledby="shop-title">
+  <div class="grid">
+    <div class="section-head reveal">
+      <p class="section-index">01</p>
+      <h2 class="section-title" id="shop-title">The shop</h2>
+      <p class="section-intro">Ten pieces, all made to order in the color you choose. Add them to the cart and pay by card, or open the listing on Etsy if you would rather buy there.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <ul class="products" role="list">
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/4429411237/terrazzo-tray-minimalist-home-decor" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/originals/44/81/a3/4481a3f4c801bc80833dd7bf59b31ae9.jpg" alt="Hand poured rectangle terrazzo tray in neutral concrete with stone flecks" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Hand poured rectangle terrazzo tray</h3>
+        <p class="product-price">$21.35</p>
+        <p class="product-caption">Neutral terrazzo, stone flecks. Star, oval or rectangle, ten colors.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="terrazzo-tray" data-name="Hand poured rectangle terrazzo tray" data-price="21.35">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/4429411237/terrazzo-tray-minimalist-home-decor" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F4429411237%2Fterrazzo-tray-minimalist-home-decor&amp;media=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F44%2F81%2Fa3%2F4481a3f4c801bc80833dd7bf59b31ae9.jpg&amp;description=Hand%20poured%20rectangle%20terrazzo%20tray%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/4569872130/hand-poured-large-black-tray-minimalist" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/originals/4e/da/72/4eda72b4b52a41d229afc506b43d68a6.jpg" alt="Large matte black concrete tray, twelve by eight inches" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Large black tray</h3>
+        <p class="product-price">$45.00</p>
+        <p class="product-caption">12 by 8 inches of matte black concrete. The one for a vanity or a bar cart.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="black-tray" data-name="Large black tray" data-price="45.00">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/4569872130/hand-poured-large-black-tray-minimalist" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F4569872130%2Fhand-poured-large-black-tray-minimalist&amp;media=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F4e%2Fda%2F72%2F4eda72b4b52a41d229afc506b43d68a6.jpg&amp;description=Large%20black%20tray%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/4436941187/handmade-moon-star-trinket-tray" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/originals/c2/40/5d/c2405da15c384587fb17db9b97d6cd46.jpg" alt="Moon and star shaped concrete trinket tray" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Moon and star trinket tray</h3>
+        <p class="product-price">$25.00</p>
+        <p class="product-caption">Celestial jewelry dish, 8 inches. Customizable color on request.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="moon-star-tray" data-name="Moon and star trinket tray" data-price="25.00">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/4436941187/handmade-moon-star-trinket-tray" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F4436941187%2Fhandmade-moon-star-trinket-tray&amp;media=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc2%2F40%2F5d%2Fc2405da15c384587fb17db9b97d6cd46.jpg&amp;description=Moon%20and%20star%20trinket%20tray%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/1759461477/tea-light-candleholders-candleholder" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/originals/b5/72/d8/b572d8592ddea5745f2f2316b259134b.jpg" alt="Oval concrete tea light holder sized for a standard tea light" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Oval concrete tea light holder</h3>
+        <p class="product-price">$22.00</p>
+        <p class="product-caption">Fits a standard tea light. Warm to the touch, heavy in the hand.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="tea-light" data-name="Oval concrete tea light holder" data-price="22.00">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/1759461477/tea-light-candleholders-candleholder" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F1759461477%2Ftea-light-candleholders-candleholder&amp;media=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb5%2F72%2Fd8%2Fb572d8592ddea5745f2f2316b259134b.jpg&amp;description=Oval%20concrete%20tea%20light%20holder%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/1759408691/modern-bud-vase-minimalist-home-decor" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/originals/d8/ed/d6/d8edd652e9ebface7b84007467e2a801.jpg" alt="Small concrete bud vase holding a single stem" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Concrete bud vase</h3>
+        <p class="product-price">$25.00</p>
+        <p class="product-caption">3 by 5 inches. Three shapes, seven colors, made for a single stem.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="bud-vase" data-name="Concrete bud vase" data-price="25.00">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/1759408691/modern-bud-vase-minimalist-home-decor" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F1759408691%2Fmodern-bud-vase-minimalist-home-decor&amp;media=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fd8%2Fed%2Fd6%2Fd8edd652e9ebface7b84007467e2a801.jpg&amp;description=Concrete%20bud%20vase%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/1836074431/minimalist-chic-zig-zag-tray-elevate" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.pinimg.com/1200x/a3/b5/d1/a3b5d1d35bb115275c8d31f5b2b83661.jpg" alt="Wavy vanity tray in pale lavender concrete" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Wavy vanity tray</h3>
+        <p class="product-price">$19.88</p>
+        <p class="product-caption">5 by 5 inches, soft zig zag edge. Rings, keys, a bar of soap.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="wavy-tray" data-name="Wavy vanity tray" data-price="19.88">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/1836074431/minimalist-chic-zig-zag-tray-elevate" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F1836074431%2Fminimalist-chic-zig-zag-tray-elevate&amp;media=https%3A%2F%2Fi.pinimg.com%2F1200x%2Fa3%2Fb5%2Fd1%2Fa3b5d1d35bb115275c8d31f5b2b83661.jpg&amp;description=Wavy%20vanity%20tray%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+      <li class="product reveal">
+        <a class="product-shot" href="https://www.etsy.com/listing/4577864683/concrete-starfish-trinket-dish-coastal" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.etsystatic.com/41743787/r/il/c868da/8542907282/il_fullxfull.8542907282_im7y.jpg" alt="Starfish trinket dish in concrete" loading="lazy" width="800" height="1000">
+        </a>
+        <h3 class="product-name">Starfish trinket dish</h3>
+        <p class="product-price">$19.00</p>
+        <p class="product-caption">About 5 inches point to point. Solid concrete, sealed matte. Felt pads on request. Beige, white, terracotta, sage, dusty blue or charcoal.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="Star" data-name="Starfish trinket dish" data-price="19.00">Add to cart</button>
+        </p>
+        <p class="product-links">
+          <a class="link product-buy" href="https://www.etsy.com/listing/4577864683/concrete-starfish-trinket-dish-coastal" target="_blank" rel="noopener">See it on Etsy</a>
+          <a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.etsy.com%2Flisting%2F4577864683%2Fconcrete-starfish-trinket-dish-coastal&amp;media=https%3A%2F%2Fi.etsystatic.com%2F41743787%2Fr%2Fil%2Fc868da%2F8542907282%2Fil_fullxfull.8542907282_im7y.jpg&amp;description=Starfish%20trinket%20dish%20by%20Sana%20Handicrafts" target="_blank" rel="noopener">Save to Pinterest</a>
+        </p>
+      </li>
+      <li class="product reveal">
+        <div class="product-shot">
+          <img src="images/rectangle-tray.jpg" alt="Long light-blue concrete rectangle tray on a bathroom counter" loading="lazy" width="800" height="1000">
+        </div>
+        <h3 class="product-name">Rectangle tray</h3>
+        <p class="product-price">$28.00</p>
+        <p class="product-caption">A long tray for the bathroom counter — soap, bottles and brushes. Made to order in your color.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="rectangle-tray" data-name="Rectangle tray" data-price="28.00">Add to cart</button>
+        </p>
+      </li>
+      <li class="product reveal">
+        <div class="product-shot">
+          <img src="images/oval-tray.jpg" alt="Stack of oval concrete trays in lavender, beige, black, sage and gold" loading="lazy" width="800" height="1000">
+        </div>
+        <h3 class="product-name">Oval tray</h3>
+        <p class="product-price">$21.00</p>
+        <p class="product-caption">Any of the five colors shown. For rings, keys and little treasures.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="oval-tray" data-name="Oval tray" data-price="21.00">Add to cart</button>
+        </p>
+      </li>
+      <li class="product reveal">
+        <div class="product-shot">
+          <img src="images/pearl-shore-pot.jpg" alt="Round beige terrazzo pot with shell flecks on a windowsill" loading="lazy" width="800" height="1000">
+        </div>
+        <h3 class="product-name">Pearl Shore Terrazzo Pot</h3>
+        <p class="product-price">$19.88</p>
+        <p class="product-caption">3 by 3 inches. Round terrazzo pot with shell flecks. Customizable in the color of your choice.</p>
+          <p class="product-caption product-custom">Made in your color. Custom colors are free.</p>
+        <p class="product-made">Made to order, ships in 5 to 7 days.</p>
+        <label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>
+        <p class="product-actions">
+          <button class="cart-add" type="button" data-id="pearl-shore-pot" data-name="Pearl Shore Terrazzo Pot" data-price="19.88">Add to cart</button>
+        </p>
+      </li>
+
+
+    </ul>
+  </div>
+</section>
+
+<div class="speckle-band" role="presentation" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="388.6" cy="7.4" rx="2.8" ry="1.5" transform="rotate(96 388.6 7.4)" fill="oklch(0.68 0.095 75)" opacity="0.74"/>
+    <ellipse cx="1091.6" cy="9.7" rx="1.6" ry="1.1" transform="rotate(43 1091.6 9.7)" fill="oklch(0.32 0.010 75)" opacity="0.66"/>
+    <ellipse cx="992.2" cy="6.5" rx="1.9" ry="1.5" transform="rotate(171 992.2 6.5)" fill="oklch(0.32 0.010 75)" opacity="0.74"/>
+    <ellipse cx="59.5" cy="10.0" rx="2.6" ry="1.5" transform="rotate(75 59.5 10.0)" fill="oklch(0.32 0.010 75)" opacity="0.51"/>
+    <ellipse cx="370.2" cy="31.4" rx="1.8" ry="1.4" transform="rotate(115 370.2 31.4)" fill="oklch(0.68 0.095 75)" opacity="0.5"/>
+    <ellipse cx="854.5" cy="22.3" rx="2.8" ry="2.1" transform="rotate(96 854.5 22.3)" fill="oklch(0.68 0.095 75)" opacity="0.68"/>
+    <ellipse cx="1108.1" cy="15.0" rx="1.9" ry="1.1" transform="rotate(140 1108.1 15.0)" fill="oklch(0.58 0.115 45)" opacity="0.74"/>
+    <ellipse cx="630.2" cy="33.5" rx="3.0" ry="1.9" transform="rotate(176 630.2 33.5)" fill="oklch(0.58 0.115 45)" opacity="0.71"/>
+    <ellipse cx="198.0" cy="14.3" rx="3.5" ry="2.5" transform="rotate(173 198.0 14.3)" fill="oklch(0.58 0.115 45)" opacity="0.83"/>
+    <ellipse cx="687.6" cy="33.5" rx="2.1" ry="1.8" transform="rotate(107 687.6 33.5)" fill="oklch(0.32 0.010 75)" opacity="0.85"/>
+    <ellipse cx="82.5" cy="5.4" rx="2.0" ry="1.7" transform="rotate(12 82.5 5.4)" fill="oklch(0.32 0.010 75)" opacity="0.8"/>
+    <ellipse cx="776.6" cy="37.8" rx="3.2" ry="2.1" transform="rotate(69 776.6 37.8)" fill="oklch(0.32 0.010 75)" opacity="0.62"/>
+    <ellipse cx="1128.8" cy="14.8" rx="2.7" ry="2.0" transform="rotate(39 1128.8 14.8)" fill="oklch(0.68 0.095 75)" opacity="0.51"/>
+    <ellipse cx="297.1" cy="16.1" rx="3.3" ry="1.8" transform="rotate(81 297.1 16.1)" fill="oklch(0.32 0.010 75)" opacity="0.59"/>
+    <ellipse cx="164.3" cy="17.5" rx="2.6" ry="2.2" transform="rotate(178 164.3 17.5)" fill="oklch(0.32 0.010 75)" opacity="0.89"/>
+    <ellipse cx="1149.3" cy="7.4" rx="1.8" ry="1.1" transform="rotate(42 1149.3 7.4)" fill="oklch(0.68 0.095 75)" opacity="0.87"/>
+    <ellipse cx="218.8" cy="12.1" rx="1.7" ry="1.3" transform="rotate(110 218.8 12.1)" fill="oklch(0.68 0.095 75)" opacity="0.93"/>
+    <ellipse cx="828.6" cy="20.6" rx="2.8" ry="2.3" transform="rotate(10 828.6 20.6)" fill="oklch(0.32 0.010 75)" opacity="0.85"/>
+    <ellipse cx="470.9" cy="16.4" rx="1.6" ry="1.3" transform="rotate(11 470.9 16.4)" fill="oklch(0.58 0.115 45)" opacity="0.94"/>
+    <ellipse cx="528.8" cy="6.0" rx="2.7" ry="1.5" transform="rotate(102 528.8 6.0)" fill="oklch(0.32 0.010 75)" opacity="0.5"/>
+    <ellipse cx="436.3" cy="2.9" rx="3.3" ry="2.7" transform="rotate(27 436.3 2.9)" fill="oklch(0.68 0.095 75)" opacity="0.93"/>
+    <ellipse cx="722.7" cy="19.1" rx="1.7" ry="1.3" transform="rotate(176 722.7 19.1)" fill="oklch(0.68 0.095 75)" opacity="0.69"/>
+    <ellipse cx="103.1" cy="5.7" rx="2.2" ry="1.4" transform="rotate(149 103.1 5.7)" fill="oklch(0.58 0.115 45)" opacity="0.71"/>
+    <ellipse cx="246.3" cy="36.3" rx="2.2" ry="1.9" transform="rotate(165 246.3 36.3)" fill="oklch(0.32 0.010 75)" opacity="0.6"/>
+    <ellipse cx="771.5" cy="5.3" rx="3.3" ry="2.5" transform="rotate(163 771.5 5.3)" fill="oklch(0.68 0.095 75)" opacity="0.84"/>
+    <ellipse cx="639.1" cy="30.0" rx="2.1" ry="1.3" transform="rotate(146 639.1 30.0)" fill="oklch(0.58 0.115 45)" opacity="0.85"/>
+    <ellipse cx="982.0" cy="28.6" rx="1.9" ry="1.4" transform="rotate(64 982.0 28.6)" fill="oklch(0.58 0.115 45)" opacity="0.94"/>
+    <ellipse cx="948.1" cy="19.0" rx="1.8" ry="1.4" transform="rotate(62 948.1 19.0)" fill="oklch(0.32 0.010 75)" opacity="0.94"/>
+    <ellipse cx="1146.0" cy="15.1" rx="1.9" ry="1.2" transform="rotate(35 1146.0 15.1)" fill="oklch(0.58 0.115 45)" opacity="0.69"/>
+    <ellipse cx="1182.3" cy="24.0" rx="1.4" ry="1.3" transform="rotate(62 1182.3 24.0)" fill="oklch(0.32 0.010 75)" opacity="0.49"/>
+    <ellipse cx="792.7" cy="34.8" rx="3.1" ry="2.7" transform="rotate(86 792.7 34.8)" fill="oklch(0.58 0.115 45)" opacity="0.67"/>
+    <ellipse cx="763.0" cy="5.1" rx="3.5" ry="3.0" transform="rotate(83 763.0 5.1)" fill="oklch(0.32 0.010 75)" opacity="0.92"/>
+    <ellipse cx="869.8" cy="8.1" rx="1.7" ry="1.0" transform="rotate(163 869.8 8.1)" fill="oklch(0.32 0.010 75)" opacity="0.52"/>
+    <ellipse cx="991.8" cy="37.3" rx="2.8" ry="1.9" transform="rotate(99 991.8 37.3)" fill="oklch(0.58 0.115 45)" opacity="0.46"/>
+    <ellipse cx="959.2" cy="28.1" rx="1.6" ry="1.4" transform="rotate(25 959.2 28.1)" fill="oklch(0.58 0.115 45)" opacity="0.86"/>
+    <ellipse cx="253.3" cy="11.1" rx="2.0" ry="1.2" transform="rotate(106 253.3 11.1)" fill="oklch(0.68 0.095 75)" opacity="0.72"/>
+    <ellipse cx="1001.0" cy="4.2" rx="3.0" ry="2.8" transform="rotate(119 1001.0 4.2)" fill="oklch(0.32 0.010 75)" opacity="0.66"/>
+    <ellipse cx="1101.3" cy="20.1" rx="2.6" ry="2.0" transform="rotate(3 1101.3 20.1)" fill="oklch(0.68 0.095 75)" opacity="0.84"/>
+    <ellipse cx="730.3" cy="29.9" rx="1.7" ry="1.0" transform="rotate(111 730.3 29.9)" fill="oklch(0.58 0.115 45)" opacity="0.73"/>
+    <ellipse cx="391.2" cy="20.7" rx="2.6" ry="2.3" transform="rotate(19 391.2 20.7)" fill="oklch(0.32 0.010 75)" opacity="0.48"/>
+    <ellipse cx="229.6" cy="3.5" rx="1.6" ry="1.2" transform="rotate(5 229.6 3.5)" fill="oklch(0.58 0.115 45)" opacity="0.67"/>
+    <ellipse cx="735.0" cy="20.2" rx="2.5" ry="2.1" transform="rotate(81 735.0 20.2)" fill="oklch(0.32 0.010 75)" opacity="0.85"/>
+    <ellipse cx="609.3" cy="10.9" rx="2.6" ry="2.4" transform="rotate(167 609.3 10.9)" fill="oklch(0.32 0.010 75)" opacity="0.9"/>
+    <ellipse cx="243.1" cy="18.1" rx="2.3" ry="1.6" transform="rotate(57 243.1 18.1)" fill="oklch(0.32 0.010 75)" opacity="0.57"/>
+    <ellipse cx="87.7" cy="26.1" rx="3.1" ry="2.9" transform="rotate(28 87.7 26.1)" fill="oklch(0.32 0.010 75)" opacity="0.77"/>
+    <ellipse cx="439.4" cy="11.1" rx="1.7" ry="1.2" transform="rotate(134 439.4 11.1)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="584.7" cy="37.6" rx="3.2" ry="1.9" transform="rotate(78 584.7 37.6)" fill="oklch(0.32 0.010 75)" opacity="0.65"/>
+    <ellipse cx="505.5" cy="14.8" rx="1.6" ry="1.1" transform="rotate(61 505.5 14.8)" fill="oklch(0.68 0.095 75)" opacity="0.67"/>
+    <ellipse cx="21.7" cy="13.9" rx="2.8" ry="2.1" transform="rotate(12 21.7 13.9)" fill="oklch(0.58 0.115 45)" opacity="0.94"/>
+    <ellipse cx="125.7" cy="11.6" rx="1.5" ry="1.3" transform="rotate(49 125.7 11.6)" fill="oklch(0.58 0.115 45)" opacity="0.86"/>
+    <ellipse cx="1019.5" cy="26.3" rx="3.5" ry="2.5" transform="rotate(97 1019.5 26.3)" fill="oklch(0.32 0.010 75)" opacity="0.74"/>
+    <ellipse cx="840.5" cy="5.2" rx="1.5" ry="1.3" transform="rotate(77 840.5 5.2)" fill="oklch(0.58 0.115 45)" opacity="0.58"/>
+    <ellipse cx="20.2" cy="5.2" rx="2.0" ry="1.6" transform="rotate(40 20.2 5.2)" fill="oklch(0.68 0.095 75)" opacity="0.88"/>
+    <ellipse cx="544.5" cy="14.2" rx="2.6" ry="2.5" transform="rotate(48 544.5 14.2)" fill="oklch(0.58 0.115 45)" opacity="0.47"/>
+    <ellipse cx="851.4" cy="35.8" rx="3.5" ry="2.2" transform="rotate(33 851.4 35.8)" fill="oklch(0.68 0.095 75)" opacity="0.76"/>
+    <ellipse cx="637.3" cy="9.4" rx="2.4" ry="2.0" transform="rotate(49 637.3 9.4)" fill="oklch(0.58 0.115 45)" opacity="0.95"/>
+    <ellipse cx="44.3" cy="2.7" rx="2.5" ry="2.5" transform="rotate(93 44.3 2.7)" fill="oklch(0.58 0.115 45)" opacity="0.92"/>
+    <ellipse cx="127.5" cy="31.5" rx="2.4" ry="1.8" transform="rotate(150 127.5 31.5)" fill="oklch(0.68 0.095 75)" opacity="0.94"/>
+    <ellipse cx="369.3" cy="9.7" rx="1.9" ry="1.1" transform="rotate(159 369.3 9.7)" fill="oklch(0.32 0.010 75)" opacity="0.77"/>
+    <ellipse cx="485.6" cy="14.5" rx="1.5" ry="0.8" transform="rotate(13 485.6 14.5)" fill="oklch(0.32 0.010 75)" opacity="0.89"/>
+    <ellipse cx="516.9" cy="4.0" rx="2.9" ry="2.0" transform="rotate(91 516.9 4.0)" fill="oklch(0.68 0.095 75)" opacity="0.75"/>
+    <ellipse cx="831.2" cy="3.6" rx="1.8" ry="1.1" transform="rotate(1 831.2 3.6)" fill="oklch(0.68 0.095 75)" opacity="0.93"/>
+    <ellipse cx="1167.1" cy="21.7" rx="1.9" ry="1.9" transform="rotate(56 1167.1 21.7)" fill="oklch(0.68 0.095 75)" opacity="0.54"/>
+    <ellipse cx="402.4" cy="5.0" rx="2.0" ry="1.7" transform="rotate(45 402.4 5.0)" fill="oklch(0.58 0.115 45)" opacity="0.5"/>
+    <ellipse cx="980.5" cy="7.2" rx="2.7" ry="1.9" transform="rotate(54 980.5 7.2)" fill="oklch(0.32 0.010 75)" opacity="0.57"/>
+    <ellipse cx="702.7" cy="21.1" rx="3.1" ry="2.6" transform="rotate(129 702.7 21.1)" fill="oklch(0.32 0.010 75)" opacity="0.64"/>
+    <ellipse cx="391.4" cy="37.5" rx="1.7" ry="1.5" transform="rotate(116 391.4 37.5)" fill="oklch(0.58 0.115 45)" opacity="0.86"/>
+    <ellipse cx="858.0" cy="20.5" rx="2.3" ry="2.0" transform="rotate(91 858.0 20.5)" fill="oklch(0.32 0.010 75)" opacity="0.83"/>
+    <ellipse cx="682.2" cy="31.3" rx="1.4" ry="1.2" transform="rotate(144 682.2 31.3)" fill="oklch(0.32 0.010 75)" opacity="0.79"/>
+    <ellipse cx="832.0" cy="10.3" rx="1.5" ry="0.8" transform="rotate(65 832.0 10.3)" fill="oklch(0.58 0.115 45)" opacity="0.64"/>
+    <ellipse cx="541.7" cy="3.8" rx="1.4" ry="1.1" transform="rotate(44 541.7 3.8)" fill="oklch(0.68 0.095 75)" opacity="0.45"/>
+    <ellipse cx="957.2" cy="28.9" rx="2.5" ry="1.9" transform="rotate(119 957.2 28.9)" fill="oklch(0.58 0.115 45)" opacity="0.82"/>
+    <ellipse cx="568.6" cy="31.1" rx="3.3" ry="2.0" transform="rotate(136 568.6 31.1)" fill="oklch(0.58 0.115 45)" opacity="0.82"/>
+    <ellipse cx="1170.9" cy="19.8" rx="2.2" ry="1.6" transform="rotate(123 1170.9 19.8)" fill="oklch(0.58 0.115 45)" opacity="0.76"/>
+    <ellipse cx="771.3" cy="4.8" rx="1.7" ry="1.1" transform="rotate(134 771.3 4.8)" fill="oklch(0.68 0.095 75)" opacity="0.76"/>
+    <ellipse cx="160.1" cy="19.4" rx="2.5" ry="2.5" transform="rotate(18 160.1 19.4)" fill="oklch(0.58 0.115 45)" opacity="0.79"/>
+    <ellipse cx="349.0" cy="20.6" rx="2.4" ry="1.8" transform="rotate(21 349.0 20.6)" fill="oklch(0.32 0.010 75)" opacity="0.55"/>
+    <ellipse cx="1173.8" cy="35.7" rx="1.4" ry="1.0" transform="rotate(148 1173.8 35.7)" fill="oklch(0.68 0.095 75)" opacity="0.95"/>
+    <ellipse cx="464.2" cy="35.0" rx="3.4" ry="1.8" transform="rotate(16 464.2 35.0)" fill="oklch(0.32 0.010 75)" opacity="0.71"/>
+    <ellipse cx="1143.3" cy="6.8" rx="3.2" ry="2.4" transform="rotate(160 1143.3 6.8)" fill="oklch(0.32 0.010 75)" opacity="0.63"/>
+    <ellipse cx="597.5" cy="33.5" rx="2.3" ry="1.3" transform="rotate(171 597.5 33.5)" fill="oklch(0.32 0.010 75)" opacity="0.68"/>
+    <ellipse cx="362.3" cy="7.1" rx="2.2" ry="1.4" transform="rotate(151 362.3 7.1)" fill="oklch(0.58 0.115 45)" opacity="0.61"/>
+    <ellipse cx="405.9" cy="16.3" rx="3.5" ry="2.1" transform="rotate(2 405.9 16.3)" fill="oklch(0.32 0.010 75)" opacity="0.59"/>
+    <ellipse cx="446.7" cy="16.1" rx="3.6" ry="2.9" transform="rotate(65 446.7 16.1)" fill="oklch(0.68 0.095 75)" opacity="0.83"/>
+    <ellipse cx="1025.1" cy="12.1" rx="1.5" ry="1.2" transform="rotate(114 1025.1 12.1)" fill="oklch(0.58 0.115 45)" opacity="0.57"/>
+    <ellipse cx="318.9" cy="20.4" rx="1.8" ry="1.2" transform="rotate(172 318.9 20.4)" fill="oklch(0.58 0.115 45)" opacity="0.86"/>
+    <ellipse cx="757.1" cy="34.9" rx="3.5" ry="2.7" transform="rotate(130 757.1 34.9)" fill="oklch(0.58 0.115 45)" opacity="0.92"/>
+    <ellipse cx="493.1" cy="24.1" rx="1.7" ry="1.6" transform="rotate(87 493.1 24.1)" fill="oklch(0.32 0.010 75)" opacity="0.51"/>
+    <ellipse cx="566.6" cy="14.4" rx="2.1" ry="1.8" transform="rotate(176 566.6 14.4)" fill="oklch(0.68 0.095 75)" opacity="0.65"/>
+    <ellipse cx="286.4" cy="19.4" rx="2.9" ry="1.6" transform="rotate(116 286.4 19.4)" fill="oklch(0.58 0.115 45)" opacity="0.55"/>
+    <ellipse cx="1087.2" cy="19.9" rx="1.9" ry="1.8" transform="rotate(179 1087.2 19.9)" fill="oklch(0.68 0.095 75)" opacity="0.66"/>
+    <ellipse cx="657.3" cy="10.8" rx="1.8" ry="1.4" transform="rotate(57 657.3 10.8)" fill="oklch(0.68 0.095 75)" opacity="0.58"/>
+    <ellipse cx="683.5" cy="33.9" rx="3.0" ry="2.1" transform="rotate(74 683.5 33.9)" fill="oklch(0.32 0.010 75)" opacity="0.56"/>
+    <ellipse cx="324.3" cy="29.1" rx="2.5" ry="2.0" transform="rotate(65 324.3 29.1)" fill="oklch(0.32 0.010 75)" opacity="0.7"/>
+    <ellipse cx="755.6" cy="33.1" rx="1.9" ry="1.2" transform="rotate(45 755.6 33.1)" fill="oklch(0.68 0.095 75)" opacity="0.77"/>
+    <ellipse cx="518.2" cy="13.2" rx="3.2" ry="3.1" transform="rotate(23 518.2 13.2)" fill="oklch(0.68 0.095 75)" opacity="0.8"/>
+    <ellipse cx="1074.8" cy="19.0" rx="2.7" ry="1.4" transform="rotate(70 1074.8 19.0)" fill="oklch(0.32 0.010 75)" opacity="0.88"/>
+    <ellipse cx="1166.7" cy="10.9" rx="1.6" ry="0.9" transform="rotate(94 1166.7 10.9)" fill="oklch(0.32 0.010 75)" opacity="0.5"/>
+    <ellipse cx="990.5" cy="27.2" rx="3.3" ry="3.1" transform="rotate(15 990.5 27.2)" fill="oklch(0.58 0.115 45)" opacity="0.45"/>
+    <ellipse cx="150.8" cy="22.5" rx="1.5" ry="1.3" transform="rotate(173 150.8 22.5)" fill="oklch(0.32 0.010 75)" opacity="0.58"/>
+    <ellipse cx="763.5" cy="27.1" rx="1.6" ry="0.9" transform="rotate(94 763.5 27.1)" fill="oklch(0.32 0.010 75)" opacity="0.55"/>
+    <ellipse cx="313.1" cy="30.5" rx="1.4" ry="1.1" transform="rotate(179 313.1 30.5)" fill="oklch(0.68 0.095 75)" opacity="0.93"/>
+    <ellipse cx="773.5" cy="33.8" rx="2.4" ry="1.5" transform="rotate(44 773.5 33.8)" fill="oklch(0.68 0.095 75)" opacity="0.8"/>
+    <ellipse cx="368.9" cy="2.8" rx="2.5" ry="2.1" transform="rotate(76 368.9 2.8)" fill="oklch(0.68 0.095 75)" opacity="0.56"/>
+    <ellipse cx="509.2" cy="15.3" rx="2.5" ry="2.1" transform="rotate(129 509.2 15.3)" fill="oklch(0.68 0.095 75)" opacity="0.79"/>
+    <ellipse cx="237.7" cy="30.7" rx="3.0" ry="2.3" transform="rotate(37 237.7 30.7)" fill="oklch(0.58 0.115 45)" opacity="0.61"/>
+    <ellipse cx="984.0" cy="10.3" rx="1.9" ry="1.7" transform="rotate(53 984.0 10.3)" fill="oklch(0.32 0.010 75)" opacity="0.7"/>
+    <ellipse cx="224.8" cy="10.0" rx="2.3" ry="1.9" transform="rotate(171 224.8 10.0)" fill="oklch(0.58 0.115 45)" opacity="0.91"/>
+    <ellipse cx="65.2" cy="2.9" rx="2.7" ry="1.9" transform="rotate(128 65.2 2.9)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="1077.8" cy="33.8" rx="3.0" ry="3.0" transform="rotate(168 1077.8 33.8)" fill="oklch(0.68 0.095 75)" opacity="0.55"/>
+    <ellipse cx="783.0" cy="20.9" rx="2.4" ry="1.6" transform="rotate(131 783.0 20.9)" fill="oklch(0.68 0.095 75)" opacity="0.94"/>
+    <ellipse cx="530.9" cy="5.9" rx="1.6" ry="0.9" transform="rotate(76 530.9 5.9)" fill="oklch(0.58 0.115 45)" opacity="0.73"/>
+    <ellipse cx="910.6" cy="15.7" rx="3.1" ry="2.0" transform="rotate(145 910.6 15.7)" fill="oklch(0.58 0.115 45)" opacity="0.47"/>
+    <ellipse cx="568.2" cy="15.4" rx="3.4" ry="2.0" transform="rotate(66 568.2 15.4)" fill="oklch(0.68 0.095 75)" opacity="0.47"/>
+    <ellipse cx="493.0" cy="31.2" rx="3.1" ry="1.6" transform="rotate(6 493.0 31.2)" fill="oklch(0.58 0.115 45)" opacity="0.85"/>
+    <ellipse cx="74.4" cy="9.0" rx="1.5" ry="1.2" transform="rotate(65 74.4 9.0)" fill="oklch(0.68 0.095 75)" opacity="0.93"/>
+    <ellipse cx="740.4" cy="11.4" rx="3.0" ry="2.0" transform="rotate(50 740.4 11.4)" fill="oklch(0.58 0.115 45)" opacity="0.81"/>
+    <ellipse cx="714.7" cy="31.0" rx="3.5" ry="1.9" transform="rotate(149 714.7 31.0)" fill="oklch(0.58 0.115 45)" opacity="0.69"/>
+    <ellipse cx="1148.1" cy="36.3" rx="2.3" ry="1.4" transform="rotate(77 1148.1 36.3)" fill="oklch(0.68 0.095 75)" opacity="0.52"/>
+    <ellipse cx="595.8" cy="2.3" rx="3.4" ry="2.2" transform="rotate(125 595.8 2.3)" fill="oklch(0.58 0.115 45)" opacity="0.75"/>
+    <ellipse cx="393.4" cy="13.5" rx="2.2" ry="2.0" transform="rotate(14 393.4 13.5)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="191.9" cy="16.7" rx="2.8" ry="2.1" transform="rotate(98 191.9 16.7)" fill="oklch(0.58 0.115 45)" opacity="0.94"/>
+    <ellipse cx="1060.2" cy="37.6" rx="2.0" ry="1.1" transform="rotate(17 1060.2 37.6)" fill="oklch(0.68 0.095 75)" opacity="0.94"/>
+    <ellipse cx="1166.5" cy="8.2" rx="1.7" ry="1.2" transform="rotate(160 1166.5 8.2)" fill="oklch(0.58 0.115 45)" opacity="0.82"/>
+    <ellipse cx="1016.4" cy="25.9" rx="1.7" ry="1.6" transform="rotate(53 1016.4 25.9)" fill="oklch(0.32 0.010 75)" opacity="0.58"/>
+    <ellipse cx="304.9" cy="11.4" rx="2.4" ry="1.4" transform="rotate(42 304.9 11.4)" fill="oklch(0.68 0.095 75)" opacity="0.89"/>
+    <ellipse cx="693.9" cy="13.7" rx="2.3" ry="2.3" transform="rotate(91 693.9 13.7)" fill="oklch(0.58 0.115 45)" opacity="0.77"/>
+    <ellipse cx="120.7" cy="18.7" rx="1.5" ry="0.8" transform="rotate(159 120.7 18.7)" fill="oklch(0.58 0.115 45)" opacity="0.87"/>
+    <ellipse cx="1097.3" cy="3.5" rx="2.0" ry="1.1" transform="rotate(34 1097.3 3.5)" fill="oklch(0.32 0.010 75)" opacity="0.55"/>
+    <ellipse cx="90.1" cy="20.5" rx="1.8" ry="1.4" transform="rotate(139 90.1 20.5)" fill="oklch(0.32 0.010 75)" opacity="0.92"/>
+    <ellipse cx="126.9" cy="23.5" rx="2.8" ry="1.7" transform="rotate(66 126.9 23.5)" fill="oklch(0.58 0.115 45)" opacity="0.47"/>
+    <ellipse cx="1199.8" cy="3.4" rx="3.0" ry="2.9" transform="rotate(147 1199.8 3.4)" fill="oklch(0.68 0.095 75)" opacity="0.65"/>
+    <ellipse cx="446.2" cy="24.4" rx="1.6" ry="0.8" transform="rotate(89 446.2 24.4)" fill="oklch(0.68 0.095 75)" opacity="0.48"/>
+    <ellipse cx="121.7" cy="16.2" rx="2.6" ry="2.1" transform="rotate(16 121.7 16.2)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="325.4" cy="37.6" rx="2.9" ry="2.1" transform="rotate(9 325.4 37.6)" fill="oklch(0.32 0.010 75)" opacity="0.73"/>
+    <ellipse cx="428.6" cy="17.0" rx="3.3" ry="3.3" transform="rotate(65 428.6 17.0)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="486.0" cy="35.9" rx="2.4" ry="1.4" transform="rotate(20 486.0 35.9)" fill="oklch(0.58 0.115 45)" opacity="0.65"/>
+    <ellipse cx="1059.4" cy="18.6" rx="1.8" ry="0.9" transform="rotate(99 1059.4 18.6)" fill="oklch(0.32 0.010 75)" opacity="0.85"/>
+    <ellipse cx="476.1" cy="22.6" rx="3.4" ry="3.0" transform="rotate(31 476.1 22.6)" fill="oklch(0.68 0.095 75)" opacity="0.59"/>
+    <ellipse cx="625.4" cy="35.3" rx="1.6" ry="1.2" transform="rotate(145 625.4 35.3)" fill="oklch(0.58 0.115 45)" opacity="0.6"/>
+    <ellipse cx="1004.8" cy="3.6" rx="3.4" ry="2.2" transform="rotate(109 1004.8 3.6)" fill="oklch(0.32 0.010 75)" opacity="0.64"/>
+    <ellipse cx="1085.1" cy="24.3" rx="3.2" ry="1.9" transform="rotate(141 1085.1 24.3)" fill="oklch(0.58 0.115 45)" opacity="0.76"/>
+    <ellipse cx="737.7" cy="9.1" rx="2.4" ry="1.9" transform="rotate(8 737.7 9.1)" fill="oklch(0.32 0.010 75)" opacity="0.53"/>
+    <ellipse cx="431.0" cy="7.4" rx="3.5" ry="3.2" transform="rotate(35 431.0 7.4)" fill="oklch(0.32 0.010 75)" opacity="0.87"/>
+    <ellipse cx="806.7" cy="26.0" rx="2.1" ry="1.5" transform="rotate(82 806.7 26.0)" fill="oklch(0.32 0.010 75)" opacity="0.84"/>
+    <ellipse cx="778.8" cy="13.1" rx="1.9" ry="1.3" transform="rotate(66 778.8 13.1)" fill="oklch(0.32 0.010 75)" opacity="0.67"/>
+    <ellipse cx="28.1" cy="24.3" rx="2.5" ry="1.5" transform="rotate(137 28.1 24.3)" fill="oklch(0.68 0.095 75)" opacity="0.87"/>
+    <ellipse cx="972.6" cy="16.4" rx="1.5" ry="1.0" transform="rotate(66 972.6 16.4)" fill="oklch(0.68 0.095 75)" opacity="0.7"/>
+    <ellipse cx="788.5" cy="3.5" rx="1.7" ry="1.6" transform="rotate(56 788.5 3.5)" fill="oklch(0.32 0.010 75)" opacity="0.71"/>
+    <ellipse cx="65.1" cy="20.1" rx="2.2" ry="2.1" transform="rotate(25 65.1 20.1)" fill="oklch(0.58 0.115 45)" opacity="0.95"/>
+  </svg>
+</div>
+
+<section class="section" id="digital" aria-labelledby="digital-title">
+  <div class="grid">
+    <div class="section-head reveal">
+      <p class="section-index">02</p>
+      <h2 class="section-title" id="digital-title">Digital downloads</h2>
+      <p class="section-intro">Printable planners, coloring books and wall art. Pay with card or PayPal, then download right away. No shipping, nothing to wait for.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <ul class="products" role="list">
+      <li class="product reveal" id="planner-2027-adhd">
+        <div class="product-shot"><img src="/images/planner-2027-adhd.jpg" alt="2027 ADHD Daily Planner preview, colorful daily pages" loading="lazy" width="680" height="880"></div>
+        <h3 class="product-name">2027 ADHD Daily Planner, Color</h3>
+        <p class="product-price">$11.50</p>
+        <p class="product-caption">365 dated daily pages with a new color each month: focus, brain dump, top 3, time blocking and habits. One letter-size PDF.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="planner-2027-adhd" data-name="2027 ADHD Daily Planner, Color" data-price="11.50">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4603601960" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="planner-2027">
+        <div class="product-shot"><img src="/images/planner-2027.jpg" alt="2027 Daily Planner Printable preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">2027 Daily Planner Printable</h3>
+        <p class="product-price">$14.99</p>
+        <p class="product-caption">365 days of pages in soft terrazzo colors, plus monthly views. Three letter-size PDFs to print at home.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="planner-2027" data-name="2027 Daily Planner Printable" data-price="14.99">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591167589" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="coloring-book-tween">
+        <div class="product-shot"><img src="/images/coloring-book-tween.jpg" alt="Kids Coloring Book, Ages 4 to 12 preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Kids Coloring Book, Ages 4 to 12</h3>
+        <p class="product-price">$12.95</p>
+        <p class="product-caption">15 intricate designs, from easy to detailed. One printable PDF, letter size.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="coloring-book-tween" data-name="Kids Coloring Book, Ages 4 to 12" data-price="12.95">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591160312" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="coloring-book-animals">
+        <div class="product-shot"><img src="/images/coloring-book-animals.jpg" alt="Cute Animals Coloring Book preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Cute Animals Coloring Book</h3>
+        <p class="product-price">$9.99</p>
+        <p class="product-caption">10 cute animal pages for ages 3 to 8. One printable PDF, letter size.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="coloring-book-animals" data-name="Cute Animals Coloring Book" data-price="9.99">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591152250" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="kids-posters">
+        <div class="product-shot"><img src="/images/kids-posters.jpg" alt="Kids Learning Posters, Set of 6 preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Kids Learning Posters, Set of 6</h3>
+        <p class="product-price">$9.95</p>
+        <p class="product-caption">Alphabet, numbers, colors, shapes, days and months. High-resolution PNGs to print.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="kids-posters" data-name="Kids Learning Posters, Set of 6" data-price="9.95">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591149480" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="christmas-wall-art">
+        <div class="product-shot"><img src="/images/christmas-wall-art.jpg" alt="Christmas Wall Art, Set of 6 preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Christmas Wall Art, Set of 6</h3>
+        <p class="product-price">$9.95</p>
+        <p class="product-caption">Six cozy holiday prints: tree, wreath, lights and candles. High-resolution JPGs.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="christmas-wall-art" data-name="Christmas Wall Art, Set of 6" data-price="9.95">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591081326" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="home-planner">
+        <div class="product-shot"><img src="/images/home-planner.jpg" alt="Home Management Planner Printable preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Home Management Planner Printable</h3>
+        <p class="product-price">$9.95</p>
+        <p class="product-caption">25 pages for cleaning, meals, budget and to-dos, in a calm terrazzo design. Printable PDF.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="home-planner" data-name="Home Management Planner Printable" data-price="9.95">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591034771" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+      <li class="product reveal" id="wall-art-bundle">
+        <div class="product-shot"><img src="/images/wall-art-bundle.jpg" alt="Four Seasons Terrazzo Wall Art, 32 Prints preview" loading="lazy" width="800" height="1000"></div>
+        <h3 class="product-name">Four Seasons Terrazzo Wall Art, 32 Prints</h3>
+        <p class="product-price">$24.95</p>
+        <p class="product-caption">32 terrazzo prints for spring, summer, fall and winter, plus 8 originals. High-resolution JPGs.</p>
+        <p class="product-actions"><button class="cart-add digital-buy" type="button" data-id="wall-art-bundle" data-name="Four Seasons Terrazzo Wall Art, 32 Prints" data-price="24.95">Buy &amp; download</button></p>
+        <p class="product-links"><a class="link product-buy" href="https://www.etsy.com/listing/4591036818" target="_blank" rel="noopener">See it on Etsy</a></p>
+      </li>
+    </ul>
+  </div>
+  <form id="digital-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" hidden></form>
+</section>
+
+<hr class="rule">
+
+<section class="section" id="pinterest" aria-labelledby="pinterest-title">
+  <div class="grid">
+    <div class="section-head reveal">
+      <p class="section-index">03</p>
+      <h2 class="section-title" id="pinterest-title">On Pinterest</h2>
+      <p class="section-intro">Styling ideas, and where each piece tends to end up in a real room. Follow along at Sana Handicraft.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <ul class="boards" role="list">
+      <li class="board reveal">
+        <a class="link" href="https://www.pinterest.com/sfvrouqa/concrete-home-decor/" target="_blank" rel="noopener">Concrete Home Decor</a>
+        <p>The pieces themselves, straight from the shop.</p>
+      </li>
+      <li class="board reveal">
+        <a class="link" href="https://www.pinterest.com/sfvrouqa/boho-vanity-styling/" target="_blank" rel="noopener">Boho Vanity Styling</a>
+        <p>Trays and dishes on real vanities.</p>
+      </li>
+      <li class="board reveal">
+        <a class="link" href="https://www.pinterest.com/sfvrouqa/handmade-housewarming-gifts/" target="_blank" rel="noopener">Handmade Housewarming Gifts</a>
+        <p>What to bring when someone moves in.</p>
+      </li>
+      <li class="board reveal">
+        <a class="link" href="https://www.pinterest.com/sfvrouqa/neutral-coffee-table-decor/" target="_blank" rel="noopener">Neutral Coffee Table Decor</a>
+        <p>Quiet palettes for the middle of a room.</p>
+      </li>
+    </ul>
+    <p class="boards-more reveal">
+      <a class="link" href="https://www.pinterest.com/sfvrouqa/" target="_blank" rel="noopener">See the full profile</a>
+    </p>
+  </div>
+</section>
+
+
+<section class="section" id="policies" aria-labelledby="policies-title">
+  <div class="grid">
+    <div class="section-head reveal">
+      <p class="section-index">04</p>
+      <h2 class="section-title" id="policies-title">Shipping &amp; returns</h2>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="policy-text" style="grid-column:1/-1;max-width:62ch;line-height:1.6">
+      <p><strong>Shipping (US only).</strong> Every piece is made to order and ships in 5 to 7 days, then takes about 2 to 5 days to arrive. Shipping is calculated at checkout from your delivery address and the weight of your order, using USPS Ground Advantage retail prices, and shown before you pay.</p>
+      <p><strong>Returns.</strong> Standard-color pieces can be returned within 14 days of delivery, unused and in their original packaging. Send me a message first, then mail the piece back. Return shipping is paid by the buyer. Your refund goes back to your PayPal or card within 5 business days of the piece arriving.</p>
+      <p><strong>Custom colors</strong> are made just for you, so they're final sale.</p>
+      <p><strong>Digital downloads</strong> arrive instantly with no shipping. Because they can't be returned, they're final sale, but if a file won't open, email me and I'll fix it or refund you.</p>
+      <p><strong>Broken or damaged?</strong> Send me a photo within 3 days of delivery and I'll make you a new one free, or refund you in full. No need to send it back.</p>
+      <p><strong>Questions?</strong> Use the <a class="link" href="#contact">contact form</a> or email <a class="link" href="mailto:sfvrouqa@gmail.com">sfvrouqa@gmail.com</a>. Sana Handicrafts, Fort Smith, Arkansas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="grid">
+    <h2 class="section-title reveal" id="contact-title">Contact</h2>
+    <p class="section-intro reveal" id="contact-intro">Questions, custom colors, a piece in a size you do not see, or wholesale. Write to me here and the message comes straight to my inbox.</p>
+    <form action='/' class='contact-form reveal' method='POST' name='contact'>
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Do not fill this in: <input name="bot-field"></label></p>
+      <p class="field">
+        <label for="c-name">Your name</label>
+        <input id="c-name" name="name" type="text" autocomplete="name" required>
+      </p>
+      <p class="field">
+        <label for="c-email">Your email</label>
+        <input id="c-email" name="email" type="email" autocomplete="email" required>
+      </p>
+      <p class="field">
+        <label for="c-subject">About</label>
+        <input id="c-subject" name="subject" type="text" placeholder="Custom color, a size, wholesale...">
+      </p>
+      <p class="field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5" required></textarea>
+      </p>
+      <p class="field field--submit">
+        <button class="contact-send" type="submit">Send message</button>
+        <span class="contact-status" id="contact-status" role="status" aria-live="polite"></span>
+      </p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="grid">
+    <div class="footer-brand">
+      <span>
+        <span class="wordmark">Sana Handicrafts</span>
+        <span class="meta">Made to order, in your color</span>
+      </span>
+    </div>
+    <div class="footer-contact">
+      <p>Questions, custom colors and wholesale: <a class="link" href="#contact">send me a message</a>.</p>
+    </div>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a class="link" href="https://www.etsy.com/shop/SANAFV" target="_blank" rel="noopener">Shop on Etsy</a>
+      <a class="link" href="https://www.pinterest.com/sfvrouqa/" target="_blank" rel="noopener">Pinterest</a>
+    </nav>
+    <p class="footer-close">Every order is completely customizable. Name your color and it gets made that way.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    for (var i = 0; i < items.length; i++) items[i].classList.add('is-in');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry, idx) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var delay = Math.min(idx, 5) * 50;
+      setTimeout(function () { el.classList.add('is-in'); }, delay);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  for (var j = 0; j < items.length; j++) io.observe(items[j]);
+})();
+
+</script>
+
+<button class="cart-button" type="button" id="cart-open" aria-haspopup="dialog">Cart <span class="cart-count" id="cart-count">0</span></button>
+<div class="cart-scrim" id="cart-scrim"></div>
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+  <div class="cart-head">
+    <div class="cart-head-title">
+      <h2 id="cart-title">Your cart</h2>
+      <p class="cart-steps" id="cart-steps">Step 1 of 3 &middot; Your items</p>
+    </div>
+    <button class="cart-close" type="button" id="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-scroll">
+    <div class="cart-step" id="step-items">
+      <div class="cart-body" id="cart-body"></div>
+    </div>
+    <div class="cart-step" id="step-addr" hidden>
+    <div class="ship-addr" id="ship-addr-block">
+      <h3>Ship to</h3>
+      <p class="ship-addr-sub">Enter the delivery address first. Shipping is calculated from the address and the weight of your order, using USPS Ground Advantage retail prices. Then choose how to pay.</p>
+      <div class="addr-grid">
+        <label>First name<input id="addr-first" type="text" autocomplete="given-name"></label>
+        <label>Last name<input id="addr-last" type="text" autocomplete="family-name"></label>
+        <label class="full">Street address<input id="addr-street" type="text" autocomplete="address-line1"></label>
+        <label class="full">Apartment, suite, etc. (optional)<input id="addr-apt" type="text" autocomplete="address-line2"></label>
+        <label class="full">City<input id="addr-city" type="text" autocomplete="address-level2"></label>
+        <label>State<select id="addr-state" autocomplete="address-level1"><option value="">Select a state</option></select></label>
+        <label>ZIP code<input id="addr-zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="72916"></label>
+      </div>
+      <button id="calc-ship" class="calc-btn" type="button">Calculate shipping</button>
+      <p id="ship-status" class="ship-status" role="status"></p>
+    </div>
+    </div>
+    <div class="cart-step" id="step-pay" hidden>
+      <div class="review" id="review-block">
+        <div class="pay-summary">
+          <div id="review-lines"></div>
+          <div class="cart-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+          <div class="cart-row"><span>Shipping (US)</span><span id="cart-shipping">$0.00</span></div>
+          <div class="cart-row cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+          <p class="pay-ship-method" id="pay-ship-method"></p>
+        </div>
+        <p class="review-addr pay-ship-to" id="review-addr"></p>
+      </div>
+      <div id="sdk-pay">
+        <h3>Pay by card</h3>
+        <div id="card-form">
+          <label class="card-field-label">Cardholder name
+            <div id="card-name-field-container" class="card-field-box"><span class="card-field-placeholder">Name on card</span></div>
+          </label>
+          <label class="card-field-label">Card number
+            <div id="card-number-field-container" class="card-field-box"><span class="card-field-placeholder">1234 5678 9012 3456</span></div>
+          </label>
+          <div class="card-field-row">
+            <label class="card-field-label">Expiry
+              <div id="card-expiry-field-container" class="card-field-box"><span class="card-field-placeholder">MM / YY</span></div>
+            </label>
+            <label class="card-field-label">Security code
+              <div id="card-cvv-field-container" class="card-field-box"><span class="card-field-placeholder">CVC</span></div>
+            </label>
+          </div>
+          <button id="card-field-submit-button" class="step-next" type="button" disabled>Pay with card</button>
+          <p class="cart-note pay-note">Card payments are processed through PayPal. No PayPal account needed. Ships within the US only. Every piece is made to order, 5 to 7 days before it ships.</p>
+          <div class="pay-back"><button class="pay-back-link" type="button" id="step-back-3">&larr; Back to address</button></div>
+        </div>
+        <p id="sdk-status" class="ship-status" role="status"></p>
+        <p id="sdk-notice" class="ship-status">Card payments on this page activate after the PayPal setup. The card button below still works.</p>
+      </div>
+      <div id="order-done" hidden>
+        <h3>Thank you!</h3>
+        <p id="order-done-text"></p>
+        <button id="order-done-continue" class="step-next" type="button">Continue shopping</button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot">
+    <div class="cart-foot-step" id="foot-step-1">
+      <p class="step1-summary" id="step1-summary"></p>
+      <button class="step-next" type="button" id="step-next-1" disabled>Continue to shipping</button>
+    </div>
+    <div class="cart-foot-step" id="foot-step-2" hidden>
+      <div class="step-nav">
+        <button class="step-back" type="button" id="step-back-2">Back</button>
+        <button class="step-next" type="button" id="step-next-2" disabled>Continue to payment</button>
+      </div>
+    </div>
+    <div class="cart-foot-step" id="foot-step-3" hidden>
+      <div id="fallback-pay" hidden>
+        <button class="cart-checkout cart-card" type="button" id="cart-card" disabled>Pay by debit or credit card</button>
+        <p class="cart-note">Card payments are processed through PayPal. Paying by card needs no PayPal account, and no card details are entered on this website. Ships within the US only. Every piece is made to order, 5 to 7 days before it ships.</p>
+      </div>
+    </div>
+  </div>
+</aside>
+<form id="cart-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" hidden></form>
+<script>
+/* Sana Handicrafts — the shop grid, the hero slideshow and the site colors
+   all come from the Google Sheet "Sana Handicrafts - Website Products".
+   Edit a row there, reload the page. No code changes needed. */
+(function(){
+  var SHEET_ID = "182TBo_bfy96nidyz7BtrFqaHUKJlu2PlvHkGdxj8xwo";
+  var LIST = document.querySelector(".products");
+
+  function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function slug(s){ return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40); }
+  function money(n){ return "$" + n.toFixed(2); }
+
+  function parseCSV(text){
+    var rows=[], row=[], cur="", q=false, i, c;
+    for(i=0;i<text.length;i++){
+      c=text[i];
+      if(q){
+        if(c==='"'){ if(text[i+1]==='"'){ cur+='"'; i++; } else { q=false; } }
+        else cur+=c;
+      } else if(c==='"'){ q=true; }
+      else if(c===','){ row.push(cur); cur=""; }
+      else if(c==='\n'){ row.push(cur); cur=""; rows.push(row); row=[]; }
+      else if(c!=='\r'){ cur+=c; }
+    }
+    if(cur.length||row.length){ row.push(cur); rows.push(row); }
+    return rows;
+  }
+
+  function sheetUrl(tab){
+    return "https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?sheet="+encodeURIComponent(tab)+"&headers=1";
+  }
+
+  /* fetch one tab as rows (header row first); CSV, then JSONP if that is blocked */
+  function loadTab(tab, done){
+    function jsonp(){
+      var cb = "sanaFeed" + tab.replace(/\W/g,"") + Date.now();
+      window[cb] = function(res){
+        try{
+          var t = res.table, rows = [t.cols.map(function(c){ return c.label || c.id; })];
+          t.rows.forEach(function(r){
+            rows.push(r.c.map(function(c){ return c ? (c.f != null ? c.f : (c.v != null ? c.v : "")) : ""; }));
+          });
+          done(rows);
+        }catch(e){ done(null); }
+        try{ delete window[cb]; }catch(e){}
+      };
+      var s = document.createElement("script");
+      s.src = sheetUrl(tab) + "&tqx=out:json;responseHandler:" + cb;
+      s.onerror = function(){ try{ delete window[cb]; }catch(e){} done(null); };
+      document.head.appendChild(s);
+    }
+    if(!window.fetch) return jsonp();
+    fetch(sheetUrl(tab) + "&tqx=out:csv&cb=" + Date.now(), { cache: "no-store" })
+      .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+      .then(function(txt){ var rows = parseCSV(txt); if(rows && rows.length > 1) done(rows); else jsonp(); })
+      .catch(jsonp);
+  }
+
+  /* ---------- the shop grid ---------- */
+
+  function toProducts(rows){
+    if(!rows || rows.length < 2) return null;
+    var head = rows[0].map(function(h){ return String(h||"").toLowerCase(); });
+    function col(){
+      for(var a=0;a<arguments.length;a++){
+        for(var i=0;i<head.length;i++){ if(head[i].indexOf(arguments[a])===0) return i; }
+      }
+      return -1;
+    }
+    var cId=col("item id","id"), cName=col("name","title"), cPrice=col("price"),
+        cEtsy=col("etsy"), cDesc=col("short desc","desc"), cShow=col("show");
+    var cImgs=[];
+    for(var h=0;h<head.length;h++){ if(head[h].indexOf("photo")===0 || head[h].indexOf("image")===0) cImgs.push(h); }
+    if(cName<0 || cPrice<0) return null;
+    var out=[];
+    for(var r=1;r<rows.length;r++){
+      var row=rows[r];
+      var name=(row[cName]||"").trim();
+      if(!name) continue;
+      var show = cShow>=0 ? String(row[cShow]||"").trim().toLowerCase() : "yes";
+      if(show==="no" || show==="false" || show==="0") continue;
+      var price=parseFloat(String(row[cPrice]||"").replace(/[^0-9.]/g,""));
+      if(isNaN(price)) continue;
+      var imgs=[];
+      for(var k=0;k<cImgs.length;k++){
+        var u=(row[cImgs[k]]||"").trim();
+        if(u && (/^https?:\/\//i.test(u)) && imgs.indexOf(u)<0) imgs.push(u);
+      }
+      out.push({
+        id: (cId>=0 && (row[cId]||"").trim()) ? (row[cId]||"").trim() : slug(name),
+        name: name, price: price, img: imgs[0] || "", imgs: imgs,
+        etsy: cEtsy>=0 ? (row[cEtsy]||"").trim() : "",
+        desc: cDesc>=0 ? (row[cDesc]||"").trim() : ""
+      });
+    }
+    return out.length ? out : null;
+  }
+
+  function tile(p){
+    var imgs = p.imgs && p.imgs.length ? p.imgs : (p.img ? [p.img] : []);
+    var shot = imgs.length
+      ? (p.etsy
+          ? '<a class="product-shot" href="'+esc(p.etsy)+'" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="product-img" src="'+esc(imgs[0])+'" alt="'+esc(p.name)+'" loading="lazy" width="800" height="1000"></a>'
+          : '<span class="product-shot"><img class="product-img" src="'+esc(imgs[0])+'" alt="'+esc(p.name)+'" loading="lazy" width="800" height="1000"></span>')
+      : '';
+    var thumbs = imgs.length > 1
+      ? '<p class="product-thumbs">' + imgs.slice(0,8).map(function(u,i){
+          return '<button type="button" class="product-thumb'+(i===0?' is-active':'')+'" data-img="'+esc(u)+'" aria-label="View photo '+(i+1)+'"><img src="'+esc(u)+'" alt="" loading="lazy"></button>';
+        }).join("") + '</p>'
+      : '';
+    var links = [];
+    if(p.etsy) links.push('<a class="link product-buy" href="'+esc(p.etsy)+'" target="_blank" rel="noopener">See it on Etsy</a>');
+    if(imgs.length){
+      var pinUrl = p.etsy || window.location.href;
+      links.push('<a class="link product-pin" href="https://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(pinUrl)+'&media='+encodeURIComponent(imgs[0])+'&description='+encodeURIComponent(p.name+" by Sana Handicrafts")+'" target="_blank" rel="noopener">Save to Pinterest</a>');
+    }
+    return '<li class="product reveal is-in">'
+      + shot + thumbs
+      + '<h3 class="product-name">'+esc(p.name)+'</h3>'
+      + '<p class="product-price">'+money(p.price)+'</p>'
+      + (p.desc ? '<p class="product-caption">'+esc(p.desc)+'</p>' : '')
+      + '<p class="product-caption product-custom">Made in your color. Custom colors are free.</p>'
+      + '<p class="product-made">Made to order, ships in 5 to 7 days.</p>'
+      + '<label class="card-color">Color you want<input type="text" class="card-color-input" placeholder="e.g. terracotta, or leave blank"></label>'
+      + '<p class="product-actions"><button class="cart-add" type="button" data-id="'+esc(p.id)+'" data-name="'+esc(p.name)+'" data-price="'+p.price.toFixed(2)+'">Add to cart</button></p>'
+      + (links.length ? '<p class="product-links">'+links.join("")+'</p>' : '')
+      + '</li>';
+  }
+
+  if(LIST){
+    LIST.addEventListener("click", function(e){
+      var btn = e.target && e.target.closest ? e.target.closest(".product-thumb") : null;
+      if(!btn) return;
+      e.preventDefault();
+      var li = btn.closest(".product");
+      var main = li && li.querySelector(".product-img");
+      if(!main) return;
+      main.src = btn.getAttribute("data-img");
+      Array.prototype.forEach.call(li.querySelectorAll(".product-thumb"), function(b){ b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+    });
+  }
+
+  (function(){
+    var css = document.createElement("style");
+    css.textContent = ".product-thumbs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.55rem 0 .1rem}"
+      + ".product-thumb{width:48px;height:48px;padding:0;border:1px solid rgba(27,26,23,.2);background:none;cursor:pointer;overflow:hidden;line-height:0;transition:border-color .15s ease}"
+      + ".product-thumb img{width:100%;height:100%;object-fit:cover;display:block}"
+      + ".product-thumb:hover{border-color:rgba(27,26,23,.55)}"
+      + ".product-thumb.is-active{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}"
+      + ".hero-slides{position:relative;overflow:hidden;background:var(--paper-2)}"
+      + ".hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease}"
+      + ".hero-slides img.is-on{opacity:1}"
+      + ".hero-slides .hero-slide-caption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:.85rem 1.1rem;"
+      + "font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;"
+      + "background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));transition:opacity .4s ease}"
+      + "@media (prefers-reduced-motion: reduce){.hero-slides img{transition:none}}";
+    document.head.appendChild(css);
+  })();
+
+  function paintProducts(products){
+    if(!products || !products.length) return;
+    window.SANA_PRODUCTS = products;
+    if(LIST){
+      LIST.innerHTML = products.map(tile).join("");
+      document.dispatchEvent(new CustomEvent("sana:products"));
+      var intro = document.querySelector("#shop .section-intro");
+      if(intro && !window.SANA_CUSTOM_SHOP_INTRO){
+        var words = ["No","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"];
+        var n = products.length;
+        var word = words[n] || String(n);
+        intro.textContent = word + (n === 1 ? " piece, made" : " pieces, all made")
+          + " to order in the color you choose. Add them to the cart and pay by card, or open the listing on Etsy if you would rather buy there.";
+      }
+    }
+    startHero(products);
+  }
+
+  /* ---------- hero slideshow ---------- */
+
+  var heroSettings = { on: true, seconds: 4 };
+  var heroStarted = false, heroProducts = null;
+
+  function startHero(products){
+    heroProducts = products || heroProducts;
+    var stage = document.getElementById("hero-slides");
+    if(!stage || !heroProducts || heroStarted) return;
+    if(heroSettings.on === false) return;
+    var slides = [];
+    heroProducts.forEach(function(p){
+      if(p.img) slides.push({ src: p.img, label: p.name + "  ·  " + money(p.price) });
+    });
+    if(!slides.length) return;
+    heroStarted = true;
+    stage.innerHTML = slides.map(function(s,i){
+      return '<img src="'+esc(s.src)+'" alt="'+esc(s.label)+'" class="'+(i===0?"is-on":"")+'" loading="'+(i===0?"eager":"lazy")+'">';
+    }).join("") + '<p class="hero-slide-caption">'+esc(slides[0].label)+'</p>';
+    if(slides.length < 2) return;
+    var imgs = stage.querySelectorAll("img");
+    var cap = stage.querySelector(".hero-slide-caption");
+    var n = 0, timer = null;
+    var ms = Math.max(1500, (parseFloat(heroSettings.seconds) || 4) * 1000);
+    var dots = document.createElement("div");
+    dots.className = "hero-dots";
+    dots.innerHTML = slides.map(function(s,i){
+      return '<button type="button" aria-label="Show '+esc(s.label)+'"'+(i===0?' aria-current="true"':'')+'></button>';
+    }).join("");
+    stage.appendChild(dots);
+    var dotBtns = dots.querySelectorAll("button");
+    function show(k){
+      imgs[n].classList.remove("is-on"); dotBtns[n].removeAttribute("aria-current");
+      n = (k + imgs.length) % imgs.length;
+      imgs[n].classList.add("is-on"); dotBtns[n].setAttribute("aria-current","true");
+      if(cap) cap.textContent = slides[n].label;
+    }
+    function play(){ clearInterval(timer); timer = setInterval(function(){ show(n + 1); }, ms); }
+    Array.prototype.forEach.call(dotBtns, function(b,i){ b.addEventListener("click", function(){ show(i); play(); }); });
+    play();
+  }
+
+  /* ---------- colors and settings ---------- */
+
+  var VARS = {
+    "background": "--bg",
+    "text": "--ink",
+    "accent": "--accent",
+    "panel": "--paper-2",
+    "line": "--hair"
+  };
+
+  function applyLook(rows){
+    if(!rows || rows.length < 2) return;
+    var root = document.documentElement;
+    for(var r=1;r<rows.length;r++){
+      var key = String(rows[r][0]||"").trim().toLowerCase();
+      var val = String(rows[r][1]||"").trim();
+      if(!key || !val) continue;
+      if(key.indexOf("hero slideshow")===0){
+        heroSettings.on = !/^(off|no|false|0)$/i.test(val);
+        continue;
+      }
+      if(key.indexOf("seconds")===0){ heroSettings.seconds = parseFloat(val) || 4; continue; }
+      for(var name in VARS){
+        if(key.indexOf(name)===0 && /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(val)){
+          root.style.setProperty(VARS[name], val);
+        }
+      }
+    }
+  }
+
+  /* if the sheet cannot be reached, run the hero off the photos already on the page */
+  setTimeout(function(){
+    if(heroStarted) return;
+    var fallback = [];
+    Array.prototype.forEach.call(document.querySelectorAll(".products .product"), function(li){
+      var im = li.querySelector("img");
+      var nm = li.querySelector(".product-name");
+      var pr = li.querySelector(".product-price");
+      if(im && im.src) fallback.push({ name: nm ? nm.textContent : "", price: parseFloat((pr?pr.textContent:"0").replace(/[^0-9.]/g,"")) || 0, img: im.src, imgs: [im.src] });
+    });
+    if(fallback.length) startHero(fallback);
+  }, 3500);
+
+  /* ---------- the sections at the bottom ---------- */
+
+  function paintSections(rows){
+    var wrap = document.querySelector("#pinterest .boards");
+    var section = document.getElementById("pinterest");
+    if(!wrap || !rows || rows.length < 2) return;
+    var head = rows[0].map(function(h){ return String(h||"").toLowerCase(); });
+    function col(){
+      for(var a=0;a<arguments.length;a++){
+        for(var i=0;i<head.length;i++){ if(head[i].indexOf(arguments[a])===0) return i; }
+      }
+      return -1;
+    }
+    var cT=col("title","name"), cD=col("desc"), cL=col("link","url"), cS=col("show");
+    if(cT<0) return;
+    var out=[];
+    for(var r=1;r<rows.length;r++){
+      var row=rows[r];
+      var title=(row[cT]||"").trim();
+      if(!title) continue;
+      var show = cS>=0 ? String(row[cS]||"").trim().toLowerCase() : "yes";
+      if(show==="no" || show==="false" || show==="0") continue;
+      var link = cL>=0 ? (row[cL]||"").trim() : "";
+      var desc = cD>=0 ? (row[cD]||"").trim() : "";
+      out.push('<li class="board reveal is-in">'
+        + (link
+            ? '<a class="link" href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(title)+'</a>'
+            : '<span class="link">'+esc(title)+'</span>')
+        + (desc ? '<p>'+esc(desc)+'</p>' : '')
+        + '</li>');
+    }
+    if(!out.length){
+      if(section){
+        section.hidden = true;
+        var priorRule = section.previousElementSibling;
+        if(priorRule && priorRule.classList.contains("rule")) priorRule.hidden = true;
+      }
+      return;
+    }
+    wrap.innerHTML = out.join("");
+  }
+
+  /* ---------- the words on the page ---------- */
+
+  var TEXT = {
+    "hero headline":        { sel: ".hero h1" },
+    "hero paragraph":       { sel: ".hero .lede" },
+    "shop heading":         { sel: "#shop-title" },
+    "shop intro":           { sel: "#shop .section-intro", custom: true },
+    "process heading":      { sel: "#process .section-title" },
+    "process intro":        { sel: "#process .section-intro" },
+    "pinterest heading":    { sel: "#pinterest-title" },
+    "pinterest intro":      { sel: "#pinterest .section-intro" },
+    "pinterest link text":  { sel: "#pinterest .boards-more a" },
+    "pinterest link url":   { sel: "#pinterest .boards-more a", attr: "href" }
+  };
+
+  function applyText(rows){
+    if(!rows || rows.length < 2) return;
+    for(var r=1;r<rows.length;r++){
+      var key = String(rows[r][0]||"").trim().toLowerCase();
+      var val = String(rows[r][1]||"").trim();
+      if(!key || !val || !TEXT[key]) continue;
+      var spec = TEXT[key];
+      var el = document.querySelector(spec.sel);
+      if(!el) continue;
+      if(spec.attr){ el.setAttribute(spec.attr, val); }
+      else { el.textContent = val; }
+      if(spec.custom) window.SANA_CUSTOM_SHOP_INTRO = true;
+    }
+  }
+
+  loadTab("Page text", function(trows){ applyText(trows); });
+
+  loadTab("Look", function(rows){
+    applyLook(rows);
+    loadTab("Products", function(prows){
+      paintProducts(toProducts(prows));
+      loadTab("Bottom sections", function(srows){ paintSections(srows); });
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var PAYPAL_EMAIL = "sanafvarouqa@gmail.com";
+  /* Shipping calculator: USPS Ground Advantage retail prices (Notice 123,
+     effective Oct 4, 2026), zone chart for origin ZIP 72916, packed weights
+     from Sana (Oct 28, 2026). Shipping = table price for the cart total
+     packed weight at the buyer zone. No flat rate, no guessing. Addresses
+     are never stored; the calculation lives only in this page. */
+/* USPS Ground Advantage-Retail, Notice 123 effective Oct 4, 2026. Each entry: [max weight, [Zone 1..9 prices]]. First four entries use max ounces; the rest use max pounds. */
+  var USPS_RATES = [[4,[8.4,8.55,8.65,8.8,9.35,9.5,9.7,10.2,10.2]],[8,[8.4,8.55,8.65,8.8,9.35,9.5,9.7,10.2,10.2]],[12,[10.05,10.45,10.7,11.1,11.7,12.1,12.7,13.65,13.65]],[15.999,[10.05,10.45,10.7,11.1,11.7,12.1,12.7,13.65,13.65]],[1,[10.05,10.45,10.7,11.1,11.7,12.1,12.7,13.65,13.65]],[2,[11.3,12,12.7,13.5,14.85,15.85,17.2,19.8,19.8]],[3,[11.8,12.5,13.15,14.2,15.7,17.2,19.7,23.15,23.15]],[4,[13.05,13.55,14.45,15.65,17.8,19.7,22.3,25.65,25.65]],[5,[13.75,14.35,15.35,16.6,18.85,21,23.8,27.45,27.45]],[6,[14.3,14.7,15.65,17.15,19.8,22.45,25.75,29.75,29.75]],[7,[14.8,15.2,16.2,17.9,20.85,23.95,27.65,32,32]],[8,[15.4,15.65,16.6,18.45,21.8,25.5,29.85,34.55,34.55]],[9,[15.9,16.2,17.05,19.1,22.8,26.95,32.15,37.1,37.1]],[10,[16.75,17.1,18.05,20.2,24.25,28.9,34.7,40.85,40.85]],[11,[18,18.55,19.4,21.65,26.95,32.2,38.7,46.05,46.05]],[12,[18.7,19.1,19.9,22.55,28.15,34,41.4,49.25,49.25]],[13,[19.45,19.75,20.4,23,29.15,35.85,44.45,53.75,53.75]],[14,[20.2,20.3,20.9,23.8,30.55,38,47.55,57.65,57.65]],[15,[20.9,21,21.65,24.45,31.7,39.5,49.4,60.1,60.1]],[16,[21.65,21.8,22.45,25.55,32.95,41,51.25,62.65,62.65]],[17,[22.4,22.65,23.15,26.65,34.2,42.7,53.55,65.6,65.6]],[18,[23.1,23.35,23.9,27.2,35.55,44.5,55.9,68.6,68.6]],[19,[23.55,23.8,24.85,27.65,36.55,45.55,56.85,70.75,70.75]],[20,[24,24.2,25.7,28.55,37.9,47,58.25,72.15,72.15]],[21,[27.5,28.75,31,36.3,46.1,56.25,67.7,81.25,81.25]],[22,[29.8,31.85,34.95,41.9,52.05,62.85,74.3,87.3,87.3]],[23,[31.35,33.65,37.1,44.95,55.6,66.85,78.6,91.8,91.8]],[24,[32.45,34.9,38.65,46.95,58.15,69.95,82,95.5,95.5]],[25,[33.65,36.2,40.15,49.05,60.65,72.85,85.3,99.1,99.1]],[26,[37.45,40.15,44.35,53.75,67.8,80.55,93.4,107.5,107.5]],[27,[38.55,41.45,45.85,55.95,70.4,83.65,96.65,111.15,111.15]],[28,[39.45,42.45,47.1,57.4,72.4,86,99.4,114.3,114.3]],[29,[40.35,43.45,48.2,59.05,74.4,88.3,102.1,117.35,117.35]],[30,[41.15,44.45,49.3,60.45,76.3,90.65,104.8,120.3,120.3]],[31,[42.15,45.35,50.4,61.9,78.2,92.95,107.35,123.3,123.3]],[32,[42.9,46.35,51.45,63.35,80.1,95.25,110,126.2,126.2]],[33,[43.75,47.25,52.55,64.8,81.95,97.4,112.4,129.05,129.05]],[34,[44.6,48.2,53.6,66.1,83.7,99.55,114.95,131.8,131.8]],[35,[45.5,49.1,54.6,67.55,85.6,101.8,117.55,134.65,134.65]],[36,[46.25,49.9,55.6,68.8,87.25,103.85,119.85,137.3,137.3]],[37,[47.1,50.75,56.6,70.2,89.05,105.95,122.25,140.1,140.1]],[38,[47.85,51.65,57.45,71.5,90.75,108.05,124.7,142.75,142.75]],[39,[48.65,52.5,58.5,72.8,92.55,110.1,127,145.3,145.3]],[40,[49.4,53.4,59.4,74.1,94.15,112.15,129.3,147.9,147.9]],[41,[50.25,54.25,60.4,75.4,95.95,114.2,131.6,150.5,150.5]],[42,[51.05,55,61.25,76.6,97.55,116.1,133.75,152.9,152.9]],[43,[51.7,55.85,62.15,77.75,99.25,118.05,136,155.4,155.4]],[44,[52.5,56.6,63,78.95,100.8,120.05,138.2,157.75,157.75]],[45,[53.2,57.35,63.9,80.2,102.45,121.8,140.35,160.1,160.1]],[46,[53.95,58.15,64.7,81.35,104,123.75,142.35,162.45,162.45]],[47,[54.6,59,65.55,82.45,105.5,125.5,144.45,164.7,164.7]],[48,[55.3,59.7,66.25,83.55,107.1,127.4,146.5,166.85,166.85]],[49,[56,60.35,67.15,84.65,108.6,129.05,148.45,169.1,169.1]],[50,[56.65,61.1,67.9,85.7,110.05,130.85,150.4,171.25,171.25]],[51,[57.35,61.8,68.6,86.75,111.5,132.6,152.35,173.25,173.25]],[52,[58.05,62.45,69.3,87.8,112.95,134.25,154.15,175.3,175.3]],[53,[58.7,63.1,69.95,88.85,114.3,135.85,156,177.3,177.3]],[54,[59.3,63.8,70.7,89.75,115.7,137.5,157.9,179.25,179.25]],[55,[59.9,64.4,71.4,90.8,117.05,139.05,159.55,181.15,181.15]],[56,[60.55,65.05,72,91.75,118.4,140.6,161.4,183,183]],[57,[61.15,65.7,72.65,92.5,119.75,142.2,162.95,184.85,184.85]],[58,[61.75,66.15,73.25,93.5,121.05,143.65,164.7,186.6,186.6]],[59,[62.35,66.85,73.9,94.3,122.3,145.15,166.3,188.25,188.25]],[60,[62.85,67.35,74.4,95.2,123.55,146.55,168,190,190]],[61,[63.4,67.95,74.95,96,124.8,148,169.45,191.6,191.6]],[62,[64,68.5,75.5,96.85,126,149.35,170.95,193.25,193.25]],[63,[64.6,69,76,97.7,127.05,150.7,172.4,194.7,194.7]],[64,[65.05,69.5,76.5,98.35,128.3,152,173.85,196.3,196.3]],[65,[65.55,70.05,77,99.1,129.45,153.3,175.2,197.7,197.7]],[66,[66.05,70.55,77.45,99.85,130.5,154.65,176.55,199.2,199.2]],[67,[66.55,70.95,77.9,100.5,131.6,155.85,177.9,200.5,200.5]],[68,[67.1,71.45,78.3,101.2,132.65,157.05,179.2,201.75,201.75]],[69,[67.5,71.9,78.75,101.8,133.7,158.15,180.4,203.05,203.05]],[70,[68,72.35,79.1,102.5,134.7,159.35,181.65,204.3,204.3]]];
+  var ZONE_RANGES = [[5,5,6],[6,9,8],[10,40,6],[41,49,7],[50,140,6],[141,143,5],[144,146,6],[147,147,5],[148,149,6],[150,168,5],[169,169,6],[170,170,5],[171,171,6],[172,173,5],[174,199,6],[200,209,5],[210,212,6],[214,214,6],[215,215,5],[216,216,6],[217,217,5],[218,219,6],[220,232,5],[233,233,6],[234,234,5],[235,237,6],[238,268,5],[270,278,5],[279,279,6],[280,288,5],[289,289,4],[290,299,5],[300,303,4],[304,304,5],[305,305,4],[306,306,5],[307,307,4],[308,310,5],[311,311,4],[312,317,5],[318,319,4],[320,323,5],[324,325,4],[326,329,5],[330,333,6],[334,339,5],[340,340,6],[341,342,5],[344,344,5],[346,347,5],[349,349,5],[350,352,4],[354,374,4],[375,375,3],[376,378,5],[379,379,4],[380,381,3],[382,385,4],[386,387,3],[388,388,4],[389,389,3],[390,390,4],[391,392,3],[393,397,4],[398,398,5],[399,407,4],[408,418,5],[420,427,4],[430,459,5],[460,464,4],[465,468,5],[469,472,4],[473,473,5],[474,479,4],[480,499,5],[500,516,4],[520,528,4],[530,532,5],[534,534,5],[535,535,4],[537,537,5],[538,538,4],[539,551,5],[553,567,5],[569,577,5],[580,587,5],[588,588,6],[590,592,6],[593,593,5],[594,599,6],[600,620,4],[622,629,4],[630,630,3],[631,631,4],[633,635,4],[636,641,3],[644,646,4],[647,647,3],[648,648,2],[649,651,3],[652,652,4],[653,655,3],[656,656,2],[657,658,3],[660,662,3],[664,665,4],[666,668,3],[669,669,4],[670,673,3],[674,681,4],[683,691,4],[692,693,5],[700,701,4],[703,708,4],[710,714,3],[716,716,3],[717,722,2],[723,725,3],[726,728,2],[729,729,1],[730,731,3],[733,733,4],[734,737,3],[738,739,4],[740,741,2],[743,745,2],[746,746,3],[747,748,2],[749,749,1],[750,753,3],[754,755,2],[756,763,3],[764,765,4],[766,767,3],[768,770,4],[772,784,4],[785,785,5],[786,797,4],[798,807,5],[808,808,4],[809,809,5],[810,810,4],[811,816,5],[820,820,5],[821,821,6],[822,823,5],[824,824,6],[825,829,5],[830,837,6],[838,838,7],[840,840,5],[841,844,6],[845,845,5],[846,847,6],[850,850,6],[851,852,5],[853,853,6],[855,857,5],[859,860,5],[863,864,6],[865,865,5],[870,871,5],[873,876,5],[877,877,4],[878,880,5],[881,882,4],[883,883,5],[884,884,4],[885,885,5],[888,888,5],[889,891,6],[893,894,6],[895,895,7],[897,897,7],[898,898,6],[900,908,6],[910,928,6],[930,931,7],[932,933,6],[934,934,7],[935,936,6],[937,966,7],[967,968,8],[969,969,9],[970,978,7],[979,979,6],[980,986,7],[988,994,7],[995,999,8]];
+  var WEIGHTS_LB = {"terrazzo-tray":1,"black-tray":2,"moon-star-tray":1,"tea-light":1,"bud-vase":1,"wavy-tray":1,"Star":1,"starfish-trinket-dish":1,"rectangle-tray":2,"oval-tray":1,"pearl-shore-pot":1};
+  var STATE_OPTS = "AL|Alabama,AK|Alaska,AZ|Arizona,AR|Arkansas,CA|California,CO|Colorado,CT|Connecticut,DE|Delaware,DC|District of Columbia,FL|Florida,GA|Georgia,HI|Hawaii,ID|Idaho,IL|Illinois,IN|Indiana,IA|Iowa,KS|Kansas,KY|Kentucky,LA|Louisiana,ME|Maine,MD|Maryland,MA|Massachusetts,MI|Michigan,MN|Minnesota,MS|Mississippi,MO|Missouri,MT|Montana,NE|Nebraska,NV|Nevada,NH|New Hampshire,NJ|New Jersey,NM|New Mexico,NY|New York,NC|North Carolina,ND|North Dakota,OH|Ohio,OK|Oklahoma,OR|Oregon,PA|Pennsylvania,RI|Rhode Island,SC|South Carolina,SD|South Dakota,TN|Tennessee,TX|Texas,UT|Utah,VT|Vermont,VA|Virginia,WA|Washington,WV|West Virginia,WI|Wisconsin,WY|Wyoming,PR|Puerto Rico,GU|Guam,VI|U.S. Virgin Islands,AS|American Samoa,MP|Northern Mariana Islands";
+  var calc = { valid: false, rate: 0, zone: 0, weightLb: 0, address: null, zip5: "" };
+  function zoneFor(zip){
+    var prefix = parseInt(zip.slice(0, 3), 10);
+    for (var i = 0; i < ZONE_RANGES.length; i++) {
+      var r = ZONE_RANGES[i];
+      if (prefix >= r[0] && prefix <= r[1]) return r[2];
+    }
+    return 0;
+  }
+  function rateFor(totalLb, zone){
+    if (!zone) return null;
+    var oz = totalLb * 16, row = null;
+    if (oz <= 4) row = USPS_RATES[0];
+    else if (oz <= 8) row = USPS_RATES[1];
+    else if (oz <= 12) row = USPS_RATES[2];
+    else if (oz < 16) row = USPS_RATES[3];
+    else {
+      var lb = Math.ceil(totalLb - 1e-9);
+      if (lb < 1) lb = 1;
+      if (lb > 70) return null;
+      row = USPS_RATES[3 + lb];
+    }
+    return row[1][zone - 1];
+  }
+  function slug2(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40); }
+  function syncTotals(){
+    $('cart-subtotal').textContent = money(subtotal());
+    if (calc.valid) {
+      $('cart-shipping').textContent = money(calc.rate);
+      $('cart-total').textContent = money(subtotal() + calc.rate);
+    } else {
+      $('cart-shipping').textContent = cart.length ? '\u2014' : money(0);
+      $('cart-total').textContent = money(subtotal());
+    }
+    var pb = $('card-field-submit-button');
+    if (pb) pb.textContent = 'Pay ' + money(subtotal() + (calc.valid ? calc.rate : 0));
+    var blocked = !cart.length || !calc.valid;
+    $('cart-card').disabled = blocked;
+    $('calc-ship').disabled = !cart.length;
+    $('step-next-1').disabled = !cart.length;
+    $('step-next-2').disabled = blocked;
+    $('step1-summary').textContent = cart.length ? (count() + (count() === 1 ? ' item' : ' items') + ' \u00b7 Subtotal ' + money(subtotal())) : 'Nothing in the cart yet.';
+    if (!cart.length && calc.valid) { calc.valid = false; $('ship-status').textContent = ''; }
+    if (!cart.length && curStep !== 1) { setStep(1); }
+    else if (cart.length && !calc.valid && curStep === 3) { setStep(2); }
+  }
+  var curStep = 1;
+  var orderDone = false;
+  var STEP_TITLES = { 1: "Step 1 of 3 \u00b7 Your items", 2: "Step 2 of 3 \u00b7 Shipping address", 3: "Step 3 of 3 \u00b7 Review and pay" };
+  function escHtml(s){ return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function updateReview(){
+    var lines = $("review-lines"), addr = $("review-addr");
+    if (!lines || !addr) return;
+    lines.innerHTML = cart.map(function(l){
+      var p = prod(l);
+      return '<div class="review-line"><span>' + escHtml(p.name) + ' \u00d7 ' + l.qty + (l.color ? " (" + escHtml(l.color) + ")" : "") + '</span><span>' + money(p.price * l.qty) + '</span></div>';
+    }).join("");
+    if (calc.valid && calc.address) {
+      var a = calc.address;
+      addr.innerHTML = '<span class="lbl">Ship to</span>' + escHtml(a.first) + " " + escHtml(a.last) + "<br>" + escHtml(a.street) + (a.apt ? ", " + escHtml(a.apt) : "") + "<br>" + escHtml(a.city) + ", " + escHtml(a.state) + " " + escHtml(calc.zip5);
+      var pm = $("pay-ship-method");
+      if (pm) pm.textContent = "USPS Ground Advantage (Zone " + calc.zone + ", " + calc.weightLb + " lb packed) \u2014 " + money(calc.rate);
+    } else {
+      addr.textContent = "Shipping has not been calculated yet.";
+      if ($("pay-ship-method")) $("pay-ship-method").textContent = "";
+    }
+    var pb2 = $('card-field-submit-button');
+    if (pb2) pb2.textContent = 'Pay ' + money(subtotal() + (calc.valid ? calc.rate : 0));
+  }
+  function setStep(n){
+    if (orderDone) n = 3;
+    else if (!cart.length) n = 1;
+    else if (n === 3 && !calc.valid) n = 2;
+    curStep = n;
+    $("step-items").hidden = n !== 1;
+    $("step-addr").hidden = n !== 2;
+    $("step-pay").hidden = n !== 3;
+    $("foot-step-1").hidden = n !== 1;
+    $("foot-step-2").hidden = n !== 2;
+    $("foot-step-3").hidden = n !== 3 || ($("fallback-pay") && $("fallback-pay").hidden);
+    $("cart-steps").textContent = orderDone ? "Order complete" : STEP_TITLES[n];
+    $("review-block").hidden = orderDone;
+    $("sdk-pay").hidden = orderDone;
+    $("order-done").hidden = !orderDone;
+    $("cart-foot").hidden = orderDone;
+    if (n === 3 && !orderDone) { updateReview(); ensurePayPal(); }
+    var sc = document.querySelector(".cart-scroll");
+    if (sc) sc.scrollTop = 0;
+  }
+  function markStale(msg){
+    var was = calc.valid;
+    calc.valid = false;
+    if (was && msg) { $('ship-status').textContent = msg; $('ship-status').className = 'ship-status'; }
+    syncTotals();
+  }
+  function readAddress(){
+    return {
+      first: $('addr-first').value.trim(),
+      last: $('addr-last').value.trim(),
+      street: $('addr-street').value.trim(),
+      apt: $('addr-apt').value.trim(),
+      city: $('addr-city').value.trim(),
+      state: $('addr-state').value,
+      zip: $('addr-zip').value.trim()
+    };
+  }
+  function calcError(msg){
+    calc.valid = false;
+    $('ship-status').textContent = msg;
+    $('ship-status').className = 'ship-status error';
+    syncTotals();
+  }
+  function cartWeightLb(){
+    var w = 0;
+    for (var i = 0; i < cart.length; i++) {
+      var l = cart[i], p = prod(l);
+      var per = WEIGHTS_LB[l.id];
+      if (per == null) per = WEIGHTS_LB[slug2(p.name)];
+      if (per == null) return null;
+      w += per * l.qty;
+    }
+    return w;
+  }
+  function calculateShipping(){
+    if (!cart.length) return;
+    var a = readAddress();
+    var missing = [];
+    if (!a.first) missing.push('first name');
+    if (!a.last) missing.push('last name');
+    if (!a.street) missing.push('street address');
+    if (!a.city) missing.push('city');
+    if (!a.state) missing.push('state');
+    if (!/^\d{5}(-\d{4})?$/.test(a.zip)) missing.push('a 5-digit ZIP code');
+    if (missing.length) { calcError('Please add ' + missing.join(', ') + ' before calculating shipping.'); return; }
+    var zip5 = a.zip.slice(0, 5);
+    var zone = zoneFor(zip5);
+    if (!zone) { calcError('We could not find a shipping zone for ZIP ' + zip5 + '. Please check the ZIP code and try again.'); return; }
+    var weightLb = cartWeightLb();
+    if (weightLb == null) { calcError('We could not calculate shipping for one of the items in this cart. Please contact the shop.'); return; }
+    var rate = rateFor(weightLb, zone);
+    if (rate == null) { calcError('This order is over the 70 lb Ground Advantage limit. Please contact the shop for a shipping quote.'); return; }
+    calc = { valid: true, rate: rate, zone: zone, weightLb: weightLb, address: a, zip5: zip5 };
+    $('ship-status').textContent = 'Shipping calculated: ' + money(rate) + ' with USPS Ground Advantage (Zone ' + zone + ', ' + weightLb + ' lb packed) to ' + zip5 + '. Now choose how to pay.';
+    $('ship-status').className = 'ship-status';
+    syncTotals();
+    setStep(3);
+  }
+  STATE_OPTS.split(',').forEach(function(pair){
+    var bits = pair.split('|');
+    var opt = document.createElement('option');
+    opt.value = bits[0]; opt.textContent = bits[1];
+    document.getElementById('addr-state').appendChild(opt);
+  });
+  var PRODUCTS = [
+    {id:"terrazzo-tray",name:"Hand poured rectangle terrazzo tray",price:21.35,img:"https://i.pinimg.com/originals/44/81/a3/4481a3f4c801bc80833dd7bf59b31ae9.jpg"},
+    {id:"black-tray",name:"Large black tray",price:45.00,img:"https://i.pinimg.com/originals/4e/da/72/4eda72b4b52a41d229afc506b43d68a6.jpg"},
+    {id:"moon-star-tray",name:"Moon and star trinket tray",price:25.00,img:"https://i.pinimg.com/originals/c2/40/5d/c2405da15c384587fb17db9b97d6cd46.jpg"},
+    {id:"tea-light",name:"Oval concrete tea light holder",price:22.00,img:"https://i.pinimg.com/originals/b5/72/d8/b572d8592ddea5745f2f2316b259134b.jpg"},
+    {id:"bud-vase",name:"Concrete bud vase",price:25.00,img:"https://i.pinimg.com/originals/d8/ed/d6/d8edd652e9ebface7b84007467e2a801.jpg"},
+    {id:"wavy-tray",name:"Wavy vanity tray",price:19.88,img:"https://i.pinimg.com/1200x/a3/b5/d1/a3b5d1d35bb115275c8d31f5b2b83661.jpg"},
+    {id:"Star",name:"Starfish trinket dish",price:19.00,img:"https://i.etsystatic.com/41743787/r/il/c868da/8542907282/il_fullxfull.8542907282_im7y.jpg"},
+    {id:"rectangle-tray",name:"Rectangle tray",price:28.00,img:"images/rectangle-tray.jpg"},
+    {id:"oval-tray",name:"Oval tray",price:21.00,img:"images/oval-tray.jpg"},
+    {id:"pearl-shore-pot",name:"Pearl Shore Terrazzo Pot",price:19.88,img:"images/pearl-shore-pot.jpg"}
+  ];
+  var byId = {};
+  function ingest(list){
+    if(!list || !list.length) return;
+    PRODUCTS = list;
+    byId = {};
+    PRODUCTS.forEach(function(p){ byId[p.id] = p; });
+  }
+  PRODUCTS.forEach(function(p){ byId[p.id] = p; });
+  ingest(window.SANA_PRODUCTS);
+
+  // Cart lives only for this tab visit, by Sana's correction on Oct 30, 2026: a refresh keeps the cart, closing the tab or opening fresh starts empty.
+  var cart = [];
+  try { cart = JSON.parse(sessionStorage.getItem("sana-cart-v2")) || []; } catch(e) { cart = []; }
+  cart = cart.filter(function(l){ return l && l.id; });
+  try { localStorage.removeItem("sana-cart-v2"); } catch(e) {}
+  function prod(l){
+    return byId[l.id] || { id: l.id, name: l.name || l.id, price: parseFloat(l.price) || 0 };
+  }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var body = $("cart-body"), drawer = $("cart-drawer"), scrim = $("cart-scrim");
+
+  function save(){ try { sessionStorage.setItem("sana-cart-v2", JSON.stringify(cart)); } catch(e){} }
+  function money(n){ return "$" + n.toFixed(2); }
+  function count(){ return cart.reduce(function(a,l){ return a + l.qty; }, 0); }
+  function subtotal(){ return cart.reduce(function(a,l){ return a + prod(l).price * l.qty; }, 0); }
+  function shipping(){ return calc.valid ? calc.rate : 0; }
+
+  function render(){
+    $("cart-count").textContent = count();
+    Array.prototype.forEach.call(document.querySelectorAll(".cart-count-nav"), function(el){ el.textContent = count(); });
+    if(!cart.length){
+      body.innerHTML = '<p class="cart-empty">Nothing in the cart yet.</p>';
+    } else {
+      body.innerHTML = cart.map(function(l, i){
+        var p = prod(l);
+        return '<div class="cart-line">' +
+          '<div class="cart-line-top">' + (p.img ? '<img class="cart-thumb" src="' + String(p.img).replace(/"/g, '&quot;') + '" alt="" onerror="this.remove()">' : '') + '<p class="cart-line-name">' + p.name + '</p>' +
+          '<span class="cart-line-price">' + money(p.price * l.qty) + '</span></div>' +
+          '<div class="cart-qty">' +
+            '<button type="button" data-act="dec" data-i="' + i + '" aria-label="One fewer">&minus;</button>' +
+            '<span>' + l.qty + '</span>' +
+            '<button type="button" data-act="inc" data-i="' + i + '" aria-label="One more">+</button>' +
+            '<button type="button" class="cart-remove" data-act="del" data-i="' + i + '">Remove</button>' +
+          '</div>' +
+          '<label class="cart-color">Color you want' +
+            '<input type="text" data-act="color" data-i="' + i + '" value="' + (l.color || "").replace(/"/g, "&quot;") + '" placeholder="e.g. terracotta, or leave blank">' +
+          '</label>' +
+        '</div>';
+      }).join("");
+    }
+    syncTotals();
+  }
+
+  function open(){ setStep(orderDone ? 3 : (calc.valid ? 2 : 1)); drawer.classList.add("is-open"); scrim.classList.add("is-open"); drawer.setAttribute("aria-hidden","false"); }
+  function close(){ drawer.classList.remove("is-open"); scrim.classList.remove("is-open"); drawer.setAttribute("aria-hidden","true"); }
+
+  document.addEventListener("click", function(e){
+    var btn = e.target && e.target.closest ? e.target.closest(".cart-add") : null;
+    if(!btn || btn.classList.contains("digital-buy")) return;
+    var id = btn.getAttribute("data-id");
+    if(!id) return;
+    var p = byId[id] || {
+      id: id,
+      name: btn.getAttribute("data-name") || id,
+      price: parseFloat(btn.getAttribute("data-price")) || 0
+    };
+    byId[id] = p;
+    var cardEl = btn.closest ? btn.closest("li") : null;
+    var cardColor = "";
+    if(cardEl){ var ci = cardEl.querySelector(".card-color-input"); if(ci) cardColor = (ci.value || "").trim(); }
+    var line = null;
+    cart.forEach(function(l){ if(l.id === id) line = l; });
+    if(line){ line.qty += 1; if(cardColor) line.color = cardColor; } else { cart.push({ id: id, qty: 1, color: cardColor, name: p.name, price: p.price }); }
+    save(); markStale("Cart changed. Calculate shipping again to update the total."); render(); open();
+    var label = btn.textContent;
+    btn.classList.add("is-added"); btn.textContent = "Added";
+    setTimeout(function(){ btn.classList.remove("is-added"); btn.textContent = label; }, 1200);
+  });
+
+  document.addEventListener("sana:products", function(){
+    ingest(window.SANA_PRODUCTS);
+    cart.forEach(function(l){ var p = byId[l.id]; if(p){ l.name = p.name; l.price = p.price; } });
+    save(); render();
+  });
+
+  body.addEventListener("click", function(e){
+    var t = e.target.closest("button[data-act]");
+    if(!t) return;
+    var i = +t.getAttribute("data-i"), act = t.getAttribute("data-act");
+    if(act === "inc") cart[i].qty += 1;
+    if(act === "dec") cart[i].qty = Math.max(1, cart[i].qty - 1);
+    if(act === "del") cart.splice(i, 1);
+    save(); markStale("Cart changed. Calculate shipping again to update the total."); render();
+  });
+  body.addEventListener("input", function(e){
+    var t = e.target;
+    if(t.getAttribute && t.getAttribute("data-act") === "color"){
+      cart[+t.getAttribute("data-i")].color = t.value;
+      save();
+    }
+  });
+
+  $("cart-open").addEventListener("click", function(){ render(); open(); });
+  var navOpen = $("cart-open-nav");
+  if(navOpen){ navOpen.addEventListener("click", function(e){ e.preventDefault(); render(); open(); }); }
+  $("cart-close").addEventListener("click", close);
+  scrim.addEventListener("click", close);
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") close(); });
+
+  function submitCart(landingPage){
+    if(!cart.length || !calc.valid) return;
+    var a = calc.address;
+    var form = $("cart-form");
+    form.innerHTML = "";
+    function add(name, value){
+      var el = document.createElement("input");
+      el.type = "hidden"; el.name = name; el.value = value;
+      form.appendChild(el);
+    }
+    add("cmd", "_cart");
+    add("upload", "1");
+    add("business", PAYPAL_EMAIL);
+    add("currency_code", "USD");
+    add("no_note", "0");
+    add("no_shipping", "2");
+    add("lc", "US");
+    add("address_override", "1");
+    add("first_name", a.first);
+    add("last_name", a.last);
+    add("address1", a.street);
+    if (a.apt) add("address2", a.apt);
+    add("city", a.city);
+    add("state", a.state);
+    add("zip", calc.zip5);
+    add("country", "US");
+    add("landing_page", landingPage);
+    add("useraction", "commit");
+    add("charset", "utf-8");
+    add("cbt", "Return to Sana Handicrafts");
+    add("return", window.location.origin + "/?order=thanks");
+    add("cancel_return", window.location.href);
+    cart.forEach(function(l, i){
+      var n = i + 1, p = prod(l);
+      add("item_name_" + n, p.name);
+      add("item_number_" + n, p.id);
+      add("amount_" + n, p.price.toFixed(2));
+      add("quantity_" + n, l.qty);
+      add("shipping_" + n, (i === 0 ? calc.rate : 0).toFixed(2));
+      add("shipping2_" + n, "0.00");
+      if(l.color){ add("on0_" + n, "Color"); add("os0_" + n, l.color.slice(0, 190)); }
+    });
+    form.submit();
+  }
+
+
+  /* ---- Pay with card on this page (PayPal Expanded Checkout) ----
+   * Card numbers are typed into PayPal-hosted fields. They travel straight
+   * to PayPal; this page never sees or stores them. The fields only appear
+   * once the PayPal app is connected: the page asks the server for its
+   * public configuration, and if that fails it keeps the card button
+   * below (the fallback), which works without any setup.
+   * Server endpoints (Netlify Functions, secrets in environment only):
+   *   GET  /.netlify/functions/paypal-config        -> { clientId, clientToken, mode }
+   *   POST /.netlify/functions/paypal-create-order  -> PayPal order + computed totals
+   *   POST /.netlify/functions/paypal-capture-order -> PayPal capture result
+   */
+  var PAYPAL_FN = "/.netlify/functions";
+  var paypalState = "idle";
+  var paypalLoadPromise = null;
+  var paypalCardField = null;
+  var paypalMethod = "card";
+  function sdkStatus(msg, isErr){
+    var el = $("sdk-status");
+    if (!el) return;
+    el.textContent = msg || "";
+    el.className = "ship-status" + (isErr ? " error" : "");
+  }
+  function sdkNotice(msg){
+    var el = $("sdk-notice");
+    if (!el) return;
+    if (msg) { el.textContent = msg; el.hidden = false; }
+    else { el.hidden = true; }
+  }
+  function showPayPalFallback(msg){
+    var fb = $("fallback-pay");
+    if (fb) fb.hidden = false;
+    var ft = $("foot-step-3");
+    if (ft && curStep === 3) ft.hidden = false;
+    var div = $("sdk-divider");
+    if (div) div.hidden = true;
+    sdkNotice(msg);
+  }
+  function paypalConfig(){
+    return fetch(PAYPAL_FN + "/paypal-config", { headers: { "Accept": "application/json" } })
+      .then(function(r){ if (!r.ok) throw new Error("config"); return r.json(); })
+      .then(function(d){ if (!d.clientId || !d.clientToken) throw new Error("config"); return d; });
+  }
+  function loadSdk(cfg){
+    return new Promise(function(resolve, reject){
+      if (window.paypal) { resolve(); return; }
+      var settled = false;
+      var s = document.createElement("script");
+      s.src = "https://www.paypal.com/sdk/js?client-id=" + encodeURIComponent(cfg.clientId) + "&components=buttons,card-fields&currency=USD&intent=capture";
+      s.setAttribute("data-client-token", cfg.clientToken);
+      s.async = true;
+      s.onload = function(){ if (!settled) { settled = true; resolve(); } };
+      s.onerror = function(){ if (!settled) { settled = true; reject(new Error("sdk")); } };
+      document.head.appendChild(s);
+      setTimeout(function(){ if (!settled && !window.paypal) { settled = true; reject(new Error("sdk-timeout")); } }, 10000);
+    });
+  }
+  function ensurePayPal(){
+    if (paypalState === "ready" || paypalState === "unavailable" || orderDone) return;
+    if (paypalLoadPromise) return;
+    paypalState = "loading";
+    paypalLoadPromise = paypalConfig()
+      .then(loadSdk)
+      .then(initPayPalUI)
+      .catch(function(){
+        paypalState = "unavailable";
+        showPayPalFallback("Card payments on this page activate after the PayPal setup. The card button below still works.");
+      });
+  }
+  function clearFieldContainer(id){
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = "";
+  }
+  function initPayPalUI(){
+    paypalState = "ready";
+    var fb = $("fallback-pay");
+    if (fb) fb.hidden = true;
+    var ft = $("foot-step-3");
+    if (ft) ft.hidden = true;
+    sdkNotice("");
+    try {
+      paypalCardField = window.paypal.CardFields({
+        style: { input: { 'font-size': '14px', color: '#1b1a17', padding: '4px 0' } },
+        createOrder: createOrderCallback,
+        onApprove: onApproveCallback,
+        onError: function(){ sdkStatus("The card payment could not be started. Please check the card details and try again.", true); }
+      });
+      if (paypalCardField.isEligible()) {
+        ["card-name-field-container", "card-number-field-container", "card-expiry-field-container", "card-cvv-field-container"].forEach(clearFieldContainer);
+        var renders = [
+          paypalCardField.NameField().render("#card-name-field-container"),
+          paypalCardField.NumberField().render("#card-number-field-container"),
+          paypalCardField.ExpiryField().render("#card-expiry-field-container"),
+          paypalCardField.CVVField().render("#card-cvv-field-container")
+        ];
+        Promise.all(renders.map(function(p){ return p && typeof p.catch === "function" ? p.catch(function(e){ throw e; }) : p; })).catch(function(){
+          $("card-form").hidden = true;
+          showPayPalFallback("Card payments are not available right now. You can still pay by card below.");
+        });
+        $("card-field-submit-button").disabled = false;
+      } else {
+        $("card-form").hidden = true;
+        showPayPalFallback("Card payments are not available for this PayPal account yet. You can still pay by card below.");
+      }
+    } catch (e) {
+      $("card-form").hidden = true;
+      showPayPalFallback("Card payments are not available right now. You can still pay by card below.");
+    }
+  }
+  function createOrderCallback(){
+    sdkStatus("");
+    var payload = {
+      items: cart.map(function(l){
+        var p = prod(l);
+        return { id: l.id, qty: l.qty, color: l.color || "", name: p.name };
+      }),
+      address: calc.address ? {
+        first: calc.address.first,
+        last: calc.address.last,
+        street: calc.address.street,
+        apt: calc.address.apt || "",
+        city: calc.address.city,
+        state: calc.address.state,
+        zip: calc.zip5
+      } : null,
+      paymentMethod: paypalMethod
+    };
+    return fetch(PAYPAL_FN + "/paypal-create-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function(r){ return r.json().then(function(d){ return { status: r.status, data: d }; }); })
+      .then(function(pair){
+        var d = pair.data;
+        if (!d || !d.id) {
+          throw new Error((d && (d.detail || d.error)) || "PayPal could not start this order.");
+        }
+        if (d.computed && d.computed.total !== (subtotal() + calc.rate).toFixed(2)) {
+          var mismatch = new Error("TOTAL_MISMATCH");
+          mismatch.isMismatch = true;
+          throw mismatch;
+        }
+        return d.id;
+      })
+      .catch(function(err){
+        if (err && err.isMismatch) {
+          sdkStatus("The total changed. Please calculate shipping again.", true);
+          markStale("The total changed. Calculate shipping again to update the total.");
+        } else {
+          sdkStatus("PayPal could not start this order. Please try again.", true);
+        }
+        throw err;
+      });
+  }
+  function onApproveCallback(data, actions){
+    return fetch(PAYPAL_FN + "/paypal-capture-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ orderId: data.orderID })
+    })
+      .then(function(r){ return r.json(); })
+      .then(function(orderData){
+        var payments = orderData && orderData.purchase_units && orderData.purchase_units[0] && orderData.purchase_units[0].payments;
+        var transaction = (payments && (payments.captures || [])[0]) || (payments && (payments.authorizations || [])[0]);
+        var errorDetail = orderData && orderData.details && orderData.details[0];
+        if (errorDetail && errorDetail.issue === "INSTRUMENT_DECLINED" && !data.card && actions) {
+          return actions.restart();
+        }
+        if (errorDetail || !transaction || transaction.status === "DECLINED") {
+          var msg = transaction
+            ? "Payment " + transaction.status + "."
+            : (errorDetail ? (errorDetail.description || "The payment was declined.") : "The payment could not be completed.");
+          throw new Error(msg);
+        }
+        showOrderDone(orderData, transaction);
+      })
+      .catch(function(err){
+        sdkStatus("Sorry, your payment could not be processed. " + (err && err.message ? err.message : "Please try again."), true);
+        throw err;
+      });
+  }
+  function showOrderDone(orderData, transaction){
+    var purchaseValue = subtotal() + calc.rate;
+    var totalText = money(purchaseValue);
+    orderDone = true;
+    cart = [];
+    save();
+    calc.valid = false;
+    calc.rate = 0;
+    calc.zone = 0;
+    calc.weightLb = 0;
+    calc.address = null;
+    calc.zip5 = "";
+    render();
+    $("order-done-text").textContent = "Your payment of " + totalText + " was received. Order ID: " + (orderData.id || "") + ". A receipt is on its way from PayPal.";
+    try {
+      if (typeof gtag === "function") {
+        gtag("event", "purchase", { transaction_id: orderData.id || "", value: Math.round(purchaseValue * 100) / 100, currency: "USD" });
+      }
+    } catch (e) {}
+    setStep(3);
+  }
+  $("cart-card").addEventListener("click", function(){ submitCart("Billing"); });
+  $("calc-ship").addEventListener("click", calculateShipping);
+  $("step-next-1").addEventListener("click", function(){ if (cart.length) setStep(2); });
+  $("step-back-2").addEventListener("click", function(){ setStep(1); });
+  $("step-next-2").addEventListener("click", function(){ if (calc.valid) setStep(3); });
+  $("step-back-3").addEventListener("click", function(){ setStep(2); });
+  $("card-field-submit-button").addEventListener("click", function(){
+    if (!paypalCardField) return;
+    paypalMethod = "card";
+    sdkStatus("Processing your card payment...");
+    var a = calc.address || {};
+    paypalCardField.submit({
+      billingAddress: {
+        addressLine1: a.street || "",
+        addressLine2: a.apt || "",
+        adminArea1: a.state || "",
+        adminArea2: a.city || "",
+        countryCode: "US",
+        postalCode: calc.zip5 || ""
+      }
+    }).catch(function(){
+      var el = $("sdk-status");
+      if (el && el.textContent.indexOf("Processing") === 0) {
+        sdkStatus("Please check the card details and try again.", true);
+      }
+    });
+  });
+  $("order-done-continue").addEventListener("click", function(){
+    orderDone = false;
+    calc.valid = false;
+    sdkStatus("");
+    render();
+    setStep(1);
+  });
+  ["addr-first","addr-last","addr-street","addr-apt","addr-city","addr-state","addr-zip"].forEach(function(id){
+    var el = $(id);
+    el.addEventListener("input", function(){ markStale("Address changed. Calculate shipping again to update the total."); });
+    el.addEventListener("change", function(){ markStale("Address changed. Calculate shipping again to update the total."); });
+  });
+
+  render();
+})();
+</script>
+
+
+<script>
+/* Per-item click tracking for Google Analytics */
+(function(){
+  function track(name, params){
+    if (typeof gtag === "function") { gtag("event", name, params || {}); }
+  }
+  function itemName(el){
+    var card = el.closest ? el.closest(".product") : null;
+    if (el.getAttribute && el.getAttribute("data-name")) return el.getAttribute("data-name");
+    if (card) {
+      var h = card.querySelector(".product-name");
+      if (h) return h.textContent.trim();
+    }
+    return "unknown item";
+  }
+  document.addEventListener("click", function(e){
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var el;
+    if ((el = t.closest(".cart-add"))) {
+      track("add_to_cart", { item_name: itemName(el), value: parseFloat(el.getAttribute("data-price")||"0"), currency: "USD" });
+      return;
+    }
+    if ((el = t.closest(".product-buy")) || (el = t.closest(".product-shot"))) {
+      track("etsy_click", { item_name: itemName(el) });
+      return;
+    }
+    if ((el = t.closest(".product-pin"))) {
+      track("pinterest_save", { item_name: itemName(el) });
+      return;
+    }
+    if ((el = t.closest(".product-thumb"))) {
+      track("photo_view", { item_name: itemName(el) });
+      return;
+    }
+    if ((el = t.closest(".cart-checkout"))) {
+      track("begin_checkout", {});
+      return;
+    }
+    if ((el = t.closest('a[href*="etsy.com/shop"]'))) {
+      track("etsy_shop_click", {});
+    }
+  }, true);
+})();
+</script>
+
+<script>
+/* Per-item view tracking for Google Analytics - fires once per product card when it scrolls into view */
+(function(){
+  var seen = {};
+  function send(el){
+    var btn = el.querySelector('.cart-add');
+    var id = btn ? btn.getAttribute('data-id') : null;
+    var h = el.querySelector('.product-name');
+    var name = h ? h.textContent.trim() : 'unknown item';
+    var key = id || name;
+    if (seen[key]) return;
+    seen[key] = 1;
+    if (typeof gtag === 'function') {
+      var params = { item_name: name };
+      if (id) params.item_id = id;
+      gtag('event', 'view_item', params);
+    }
+  }
+  var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting) { send(en.target); io.unobserve(en.target); } });
+  }, { threshold: 0.25 }) : null;
+  function observeAll(){
+    var cards = document.querySelectorAll('#shop .product');
+    for (var i = 0; i < cards.length; i++) { if (io) io.observe(cards[i]); }
+  }
+  document.addEventListener('sana:products', observeAll);
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', observeAll); } else { observeAll(); }
+})();
+</script>
+
+<script>
+/* Contact form: submit without leaving the page */
+(function(){
+  var form = document.querySelector('form.contact-form');
+  if(!form) return;
+  var status = document.getElementById('contact-status');
+  var btn = form.querySelector('.contact-send');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(btn) btn.disabled = true;
+    if(status) status.textContent = 'Sending...';
+    var data = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:data })
+      .then(function(r){
+        if(!r.ok) throw new Error('bad status');
+        form.reset();
+        if(status) status.textContent = 'Thank you. Your message is on its way and I will reply by email.';
+        if(typeof gtag === 'function') gtag('event','contact_submit',{});
+      })
+      .catch(function(){
+        if(status) status.textContent = 'That did not go through. Please try again in a moment.';
+      })
+      .then(function(){ if(btn) btn.disabled = false; });
+  });
+})();
+</script>
+<a href="#top" class="to-top" aria-label="Back to top">&#8593;</a>
+<script>
+(function(){var b=document.querySelector(".to-top");if(!b)return;function f(){b.classList.toggle("is-on",window.scrollY>700);}window.addEventListener("scroll",f,{passive:true});f();})();
+/* keep Google product data in step with the sheet */
+document.addEventListener("sana:products",function(){try{var P=window.SANA_PRODUCTS||[],el=document.getElementById("sana-ld");if(!el||!P.length)return;var d=JSON.parse(el.textContent);d["@graph"][1].itemListElement=P.map(function(p,i){return{"@type":"ListItem",position:i+1,item:{"@type":"Product",name:p.name,image:p.img,description:p.desc,brand:{"@type":"Brand",name:"Sana Handicrafts"},offers:{"@type":"Offer",price:p.price.toFixed(2),priceCurrency:"USD",availability:"https://schema.org/MadeToOrder",url:p.etsy||location.href}}};});el.textContent=JSON.stringify(d);}catch(e){}});
+</script>
+
+<script>
+(function(){
+  var TOK="349eb815447eb8c6";
+  document.querySelectorAll(".digital-buy").forEach(function(b){
+    b.addEventListener("click",function(){
+      var f=document.getElementById("digital-form"); f.innerHTML="";
+      function add(n,v){var e=document.createElement("input");e.type="hidden";e.name=n;e.value=v;f.appendChild(e);}
+      add("cmd","_xclick");add("business","sanafvarouqa@gmail.com");add("currency_code","USD");
+      add("item_name",b.getAttribute("data-name")+" (digital download)");add("item_number",b.getAttribute("data-id"));
+      add("amount",b.getAttribute("data-price"));add("quantity","1");add("no_shipping","1");add("no_note","1");
+      add("lc","US");add("landing_page","Billing");add("useraction","commit");add("charset","utf-8");add("rm","1");
+      add("cbt","Get your download");
+      add("return",window.location.origin+"/dl/"+TOK+"/"+b.getAttribute("data-id")+".html");
+      add("cancel_return",window.location.origin+"/#digital");
+      if(typeof gtag==="function")gtag("event","begin_checkout",{items:[{item_id:b.getAttribute("data-id")}]});
+      f.submit();
+    });
+  });
+})();
+</script>
+<script>
+(function(){var d=document.getElementById('nav-drop');if(!d)return;var b=d.querySelector('.nav-drop-btn');
+function set(o){d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+b.addEventListener('click',function(e){e.stopPropagation();set(!d.classList.contains('open'));});
+d.querySelectorAll('.nav-drop-menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('click',function(e){if(!d.contains(e.target))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
+</body>
+</html>
